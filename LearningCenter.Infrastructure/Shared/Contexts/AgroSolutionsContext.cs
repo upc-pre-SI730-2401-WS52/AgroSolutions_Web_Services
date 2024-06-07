@@ -13,6 +13,9 @@ public class AgroSolutionsContext : DbContext
     {
     }
 
+    public DbSet<Crop> Crops { get; set; }
+    public DbSet<Calendar> Calendars { get; set; }
+    public DbSet<Adviser> Advisers { get; set; }
     public DbSet<Finance> Finances { get; set; }
     public DbSet<PendingCollections> PendingCollectionsCollections { get; set; }
 
@@ -34,5 +37,8 @@ public class AgroSolutionsContext : DbContext
         builder.Entity<Finance>().ToTable("PendingCollections");
         //builder.Entity<Finance>().HasKey(p => p.Id);
         //builder.Entity<Finance>().Property(p => p.Name).IsRequired().HasMaxLength(25);
+        builder.Entity<Crop>().ToTable("Crop");
+        builder.Entity<Calendar>().ToTable("Calendar");
+        builder.Entity<Adviser>().ToTable("Adviser");
     }
 }
