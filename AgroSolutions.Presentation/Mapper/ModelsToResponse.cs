@@ -11,5 +11,8 @@ public class ModelsToResponse : Profile
     {
         CreateMap<Finance, FinanceResponse>();
         CreateMap<PendingCollections, PendingCollectionsResponse>();
+        CreateMap<Crop, CropsResponse>();
+        CreateMap<Adviser, AdviserResponse>();
+        CreateMap<Calendar, CalendarResponse>();
     }
 }

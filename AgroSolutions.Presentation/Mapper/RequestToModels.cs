@@ -11,5 +11,8 @@ public class RequestToModels : Profile
     {
         CreateMap<CreateFinanceCommand, Finance>();
         CreateMap<CreatePendingCollections, PendingCollections>();
+        CreateMap<CreateAdviserCommand, Adviser>();
+        CreateMap<CreateCropsCommand, Crop>();
+        CreateMap<CreateCalendarCommand, Calendar>();
     }
 }
