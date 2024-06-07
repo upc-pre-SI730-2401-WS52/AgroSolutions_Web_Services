@@ -13,3 +13,18 @@ E:\Carpeta Hola\UPC\AgroSolutions\BACK END FINAL AHORA ES PERSONAL\back-end-clea
 E:\Carpeta Hola\UPC\AgroSolutions\BACK END FINAL AHORA ES PERSONAL\back-end-clean-architecture-ddd-main\AgroSolutions.Domain\obj\Debug\net7.0\refint\AgroSolutions.Domain.dll
 E:\Carpeta Hola\UPC\AgroSolutions\BACK END FINAL AHORA ES PERSONAL\back-end-clean-architecture-ddd-main\AgroSolutions.Domain\obj\Debug\net7.0\AgroSolutions.Domain.pdb
 E:\Carpeta Hola\UPC\AgroSolutions\BACK END FINAL AHORA ES PERSONAL\back-end-clean-architecture-ddd-main\AgroSolutions.Domain\obj\Debug\net7.0\ref\AgroSolutions.Domain.dll
+D:\.NET\Agrosolutions 2.0\AgroSolutions_Web_Services\AgroSolutions.Domain\bin\Debug\net7.0\AgroSolutions.Domain.deps.json
+D:\.NET\Agrosolutions 2.0\AgroSolutions_Web_Services\AgroSolutions.Domain\bin\Debug\net7.0\AgroSolutions.Domain.dll
+D:\.NET\Agrosolutions 2.0\AgroSolutions_Web_Services\AgroSolutions.Domain\bin\Debug\net7.0\AgroSolutions.Domain.pdb
+D:\.NET\Agrosolutions 2.0\AgroSolutions_Web_Services\AgroSolutions.Domain\bin\Debug\net7.0\AgroSolutions.Shared.dll
+D:\.NET\Agrosolutions 2.0\AgroSolutions_Web_Services\AgroSolutions.Domain\bin\Debug\net7.0\AgroSolutions.Shared.pdb
+D:\.NET\Agrosolutions 2.0\AgroSolutions_Web_Services\AgroSolutions.Domain\obj\Debug\net7.0\AgroSolutions.Domain.csproj.AssemblyReference.cache
+D:\.NET\Agrosolutions 2.0\AgroSolutions_Web_Services\AgroSolutions.Domain\obj\Debug\net7.0\AgroSolutions.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\.NET\Agrosolutions 2.0\AgroSolutions_Web_Services\AgroSolutions.Domain\obj\Debug\net7.0\AgroSolutions.Domain.AssemblyInfoInputs.cache
+D:\.NET\Agrosolutions 2.0\AgroSolutions_Web_Services\AgroSolutions.Domain\obj\Debug\net7.0\AgroSolutions.Domain.AssemblyInfo.cs
+D:\.NET\Agrosolutions 2.0\AgroSolutions_Web_Services\AgroSolutions.Domain\obj\Debug\net7.0\AgroSolutions.Domain.csproj.CoreCompileInputs.cache
+D:\.NET\Agrosolutions 2.0\AgroSolutions_Web_Services\AgroSolutions.Domain\obj\Debug\net7.0\AgroSolutions.Domain.csproj.CopyComplete
+D:\.NET\Agrosolutions 2.0\AgroSolutions_Web_Services\AgroSolutions.Domain\obj\Debug\net7.0\AgroSolutions.Domain.dll
+D:\.NET\Agrosolutions 2.0\AgroSolutions_Web_Services\AgroSolutions.Domain\obj\Debug\net7.0\refint\AgroSolutions.Domain.dll
+D:\.NET\Agrosolutions 2.0\AgroSolutions_Web_Services\AgroSolutions.Domain\obj\Debug\net7.0\AgroSolutions.Domain.pdb
+D:\.NET\Agrosolutions 2.0\AgroSolutions_Web_Services\AgroSolutions.Domain\obj\Debug\net7.0\ref\AgroSolutions.Domain.dll

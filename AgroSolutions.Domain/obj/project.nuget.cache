@@ -1,12 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Ysge0xdMZYsd/jiu7Bstrx90Ia8CXfks1YLUaodFXOvd3n5//XW7tUVurSnBDZ3x6c94wpQaooJRz6H9PBUkQg==",
+  "dgSpecHash": "a0Pc5JqGv0DV3FvUa7+m59VQiijvQ6K53RjFBWmUTyyzzlsTFTkj4pIU9cEVIzmPhAgGdGIQ/t5fF6p6GcHi1g==",
   "success": true,
-  "projectFilePath": "E:\\Carpeta Hola\\UPC\\AgroSolutions\\BACK END FINAL AHORA ES PERSONAL\\back-end-clean-architecture-ddd-main\\AgroSolutions.Domain\\AgroSolutions.Domain.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\CORSAIR\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.14\\microsoft.netcore.app.ref.7.0.14.nupkg.sha512",
-    "C:\\Users\\CORSAIR\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.14\\microsoft.windowsdesktop.app.ref.7.0.14.nupkg.sha512",
-    "C:\\Users\\CORSAIR\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.14\\microsoft.aspnetcore.app.ref.7.0.14.nupkg.sha512"
-  ],
+  "projectFilePath": "D:\\.NET\\Agrosolutions 2.0\\AgroSolutions_Web_Services\\AgroSolutions.Domain\\AgroSolutions.Domain.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }
