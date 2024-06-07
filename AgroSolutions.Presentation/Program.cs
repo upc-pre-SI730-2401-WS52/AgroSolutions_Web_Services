@@ -47,6 +47,9 @@ builder.Services.AddScoped<IFinanceQueryService, FinanceQueryService>();
 builder.Services.AddScoped<IPendingCollectionsRepository, PendingCollectionsRepository >();
 builder.Services.AddScoped<IPendingCollectionsCommandService, PendingCollectionsCommandService>();
 builder.Services.AddScoped<IPendingCollectionsQueryService, PendingCollectionsQueryService>();
+builder.Services.AddScoped<ICropRepository, CropRepository>();
+builder.Services.AddScoped<ICropCommandService, CropCommandService>();
+builder.Services.AddScoped<ICropQueryService, CropQueryService>();
 
 //AUtomapper
 builder.Services.AddAutoMapper(
