@@ -34,6 +34,8 @@
       <Folder Include="Employee\" />
       <Folder Include="IAM\" />
       <Folder Include="PendingTask\" />
+      <Folder Include="Pending\" />
+      <Folder Include="Publishing\" />
       <Folder Include="Team\" />
     </ItemGroup>
 
