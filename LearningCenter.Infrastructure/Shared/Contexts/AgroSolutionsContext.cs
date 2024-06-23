@@ -34,7 +34,7 @@ public class AgroSolutionsContext : DbContext
         base.OnModelCreating(builder);
 
         builder.Entity<Finance>().ToTable("Finance");
-        builder.Entity<Finance>().ToTable("PendingCollections");
+        builder.Entity<Finance>().ToTable("PendingCollection");
         //builder.Entity<Finance>().HasKey(p => p.Id);
         //builder.Entity<Finance>().Property(p => p.Name).IsRequired().HasMaxLength(25);
         builder.Entity<Crop>().ToTable("Crop");

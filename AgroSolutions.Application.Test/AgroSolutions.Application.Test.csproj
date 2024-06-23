@@ -32,7 +32,9 @@
     <ItemGroup>
       <Folder Include="Blog\" />
       <Folder Include="Employee\" />
+      <Folder Include="Finance\" />
       <Folder Include="IAM\" />
+      <Folder Include="PendingCollection\" />
       <Folder Include="PendingTask\" />
       <Folder Include="Team\" />
     </ItemGroup>

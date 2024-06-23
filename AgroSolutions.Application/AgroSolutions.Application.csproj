@@ -26,8 +26,10 @@
       <Folder Include="IAM\CommandServices\" />
       <Folder Include="IAM\QueryServices\" />
       <Folder Include="Mtk\" />
-      <Folder Include="PendingTask\CommandServices\" />
-      <Folder Include="PendingTask\QueryServices\" />
+      <Folder Include="PendingCollection\CommandServices\" />
+      <Folder Include="PendingCollection\QueryServices\" />
+      <Folder Include="Publishing\CommandServices\" />
+      <Folder Include="Publishing\QueryServices\" />
       <Folder Include="Purchase\" />
       <Folder Include="Team\CommandServices\" />
       <Folder Include="Team\QueryServices\" />

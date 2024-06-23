@@ -26,13 +26,13 @@ public class PendingCollectionsController : ControllerBase
     }
 
 
-    // GET: api/PendingCollections
-    ///<summary>Obtain all the active PendingCollections</summary>
+    // GET: api/PendingCollection
+    ///<summary>Obtain all the active PendingCollection</summary>
     /// <remarks>
-    /// GET /api/PendingCollections
+    /// GET /api/PendingCollection
     ///   </remarks>
-    /// <response code="200">Returns all the PendingCollections</response>
-    /// <response code="404">If there are no PendingCollections</response>
+    /// <response code="200">Returns all the PendingCollection</response>
+    /// <response code="404">If there are no PendingCollection</response>
     /// <response code="500">If there is an internal server error</response>
     [HttpGet]
     [ProducesResponseType( typeof(List<PendingCollectionsResponse>), 200)]
@@ -48,7 +48,7 @@ public class PendingCollectionsController : ControllerBase
         return Ok(result);
     }
 
-    // GET: api/PendingCollections/Search
+    // GET: api/PendingCollection/Search
     [HttpGet]
     [Route("Search")]
     public async Task<IActionResult> GetSearchAsync(string? name)
@@ -61,7 +61,7 @@ public class PendingCollectionsController : ControllerBase
         return Ok(result);
     }
 
-    // GET: api/PendingCollections/5
+    // GET: api/PendingCollection/5
     [HttpGet("{id}", Name = "Getter")]
     public async Task<IActionResult> GetAsync(int id)
     {
@@ -72,15 +72,15 @@ public class PendingCollectionsController : ControllerBase
         return Ok(result);
     }
 
-    // POST: api/PendingCollections
-    // POST: api/PendingCollections
+    // POST: api/PendingCollection
+    // POST: api/PendingCollection
     /// <summary>
-    /// Creates a new PendingCollections.
+    /// Creates a new PendingCollection.
     /// </summary>
     /// <remarks>
     /// Sample request:
     ///
-    ///     POST /api/PendingCollections
+    ///     POST /api/PendingCollection
     ///     {
     ///         "id": "1",
     ///         "type": "Salarios",
@@ -90,10 +90,10 @@ public class PendingCollectionsController : ControllerBase
     ///     }
     ///
     /// </remarks>
-    /// <param name="CreatePendingCollectionsCommand">The PendingCollections to create</param>
-    /// <returns>A newly created PendingCollections</returns>
-    /// <response code="201">Returns the newly created PendingCollections</response>
-    /// <response code="400">If the PendingCollections has invalid property</response>
+    /// <param name="CreatePendingCollectionsCommand">The PendingCollection to create</param>
+    /// <returns>A newly created PendingCollection</returns>
+    /// <response code="201">Returns the newly created PendingCollection</response>
+    /// <response code="400">If the PendingCollection has invalid property</response>
     /// <response code="409">Error validating data</response>
     /// <response code="500">Unexpected error</response>
     [HttpPost]
@@ -115,7 +115,7 @@ public class PendingCollectionsController : ControllerBase
         //return BadRequest();
     }
     /*
-    // PUT: api/PendingCollections/5
+    // PUT: api/PendingCollection/5
     [HttpPut("{id}")]
     public async Task<IActionResult> PutAsync(int id, [FromBody] UpdateFinanceCommand command)
     {
@@ -127,7 +127,7 @@ public class PendingCollectionsController : ControllerBase
         return Ok();
     }
     */
-    // DELETE: api/PendingCollections/5
+    // DELETE: api/PendingCollection/5
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteAsync(int id)
     {
