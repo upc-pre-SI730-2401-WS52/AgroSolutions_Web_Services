@@ -29,4 +29,12 @@
         <ProjectReference Include="..\LearningCenter.Infrastructure\AgroSolutions.Infraestructure.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Blog\" />
+      <Folder Include="Employee\" />
+      <Folder Include="IAM\" />
+      <Folder Include="PendingTask\" />
+      <Folder Include="Team\" />
+    </ItemGroup>
+
 </Project>

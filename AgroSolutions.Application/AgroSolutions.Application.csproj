@@ -18,9 +18,19 @@
     </ItemGroup>
 
     <ItemGroup>
+      <Folder Include="Blog\CommandService\" />
+      <Folder Include="Blog\QueryServices\" />
       <Folder Include="Domain\" />
+      <Folder Include="Employee\CommandServices\" />
+      <Folder Include="Employee\QueryServices\" />
+      <Folder Include="IAM\CommandServices\" />
+      <Folder Include="IAM\QueryServices\" />
       <Folder Include="Mtk\" />
+      <Folder Include="PendingTask\CommandServices\" />
+      <Folder Include="PendingTask\QueryServices\" />
       <Folder Include="Purchase\" />
+      <Folder Include="Team\CommandServices\" />
+      <Folder Include="Team\QueryServices\" />
     </ItemGroup>
 
 </Project>

@@ -12,7 +12,35 @@
     </ItemGroup>
 
     <ItemGroup>
+      <Folder Include="Employee\Models\Aggregates\" />
+      <Folder Include="Employee\Models\Commands\" />
+      <Folder Include="Employee\Models\Entities\" />
+      <Folder Include="Employee\Models\Queries\" />
+      <Folder Include="Employee\Models\Response\" />
+      <Folder Include="Employee\Repositories\" />
+      <Folder Include="Employee\Services\" />
+      <Folder Include="IAM\Models\Aggregates\" />
+      <Folder Include="IAM\Models\Commands\" />
+      <Folder Include="IAM\Models\Entities\" />
+      <Folder Include="IAM\Models\Queries\" />
+      <Folder Include="IAM\Models\Response\" />
+      <Folder Include="IAM\Repositories\" />
+      <Folder Include="IAM\Services\" />
+      <Folder Include="PendingTask\Models\Aggregates\" />
+      <Folder Include="PendingTask\Models\Commands\" />
+      <Folder Include="PendingTask\Models\Entities\" />
+      <Folder Include="PendingTask\Models\Queries\" />
+      <Folder Include="PendingTask\Models\Response\" />
+      <Folder Include="PendingTask\Repositories\" />
+      <Folder Include="PendingTask\Services\" />
       <Folder Include="Publishing\Models\ValueObjects\" />
+      <Folder Include="Team\Models\Aggregates\" />
+      <Folder Include="Team\Models\Commands\" />
+      <Folder Include="Team\Models\Entities\" />
+      <Folder Include="Team\Models\Queries\" />
+      <Folder Include="Team\Models\Response\" />
+      <Folder Include="Team\Repositories\" />
+      <Folder Include="Team\Services\" />
     </ItemGroup>
 
 </Project>

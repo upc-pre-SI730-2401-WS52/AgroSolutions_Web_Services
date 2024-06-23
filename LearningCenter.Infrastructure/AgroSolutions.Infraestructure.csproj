@@ -19,8 +19,12 @@
     </ItemGroup>
 
     <ItemGroup>
+        <Folder Include="Employee\Persistence\" />
+        <Folder Include="IAM\Pesistence\" />
+        <Folder Include="PendingTask\Percistence\" />
         <Folder Include="Publishing\"/>
         <Folder Include="Shared\"/>
+        <Folder Include="Team\Persistence\" />
     </ItemGroup>
 
     <ItemGroup>

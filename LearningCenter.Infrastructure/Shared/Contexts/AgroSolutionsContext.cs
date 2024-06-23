@@ -24,7 +24,7 @@ public class AgroSolutionsContext : DbContext
         if (!optionsBuilder.IsConfigured)
         {
             var serverVersion = new MySqlServerVersion(new Version(8, 0, 29));
-            optionsBuilder.UseMySql("Server=127.0.0.1,3306;Uid=root;Pwd=Yu$miPintFu&&845;Database=agro_solutions_ws52;",
+            optionsBuilder.UseMySql("Server=127.0.0.1,3306;Uid=root;Pwd=12345678;Database=agro_solutions_ws52;",
                 serverVersion);
         }
     }
