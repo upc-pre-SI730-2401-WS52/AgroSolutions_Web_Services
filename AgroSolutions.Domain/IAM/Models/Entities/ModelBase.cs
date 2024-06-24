@@ -11,9 +11,12 @@ public class ModelBase
     public int? UpdatedUser { get; set; }
 
     [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
-
-    public DateTime CreatedDate { get; set; }
+    public DateTime CreateDate { get; set; } = DateTime.Now;
 
     public DateTime? UpdatedDate { get; set; }
     public bool IsActive { get; set; } = true;
+    
+    public string? IpAddress { get; set; }
+    public string? Action { get; set; }
+    public string? AdditionalInfo { get; set; }
 }

@@ -14,5 +14,6 @@ public class ModelsToResponse : Profile
         CreateMap<Crop, CropsResponse>();
         CreateMap<Adviser, AdviserResponse>();
         CreateMap<Calendar, CalendarResponse>();
+        CreateMap<User, UserResponse>();
     }
 }

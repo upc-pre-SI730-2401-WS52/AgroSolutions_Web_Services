@@ -1,14 +1,30 @@
 using System.Reflection;
 using _1_API.Mapper;
+using _2_Domain.IAM.CommandServices;
 using Application;
+using Application.IAM.CommandServices;
 using Domain;
 using Infraestructure;
 using Infraestructure.Contexts;
+using LearningCenter.Domain.IAM.Repositories;
+using LearningCenter.Domain.IAM.Services;
+using LearningCenter.Infraestructure.IAM.Persistence;
 using LearningCenter.Presentation.Middleware;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 var builder = WebApplication.CreateBuilder(args);
+
+//Ad cors
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAllPolicy", 
+        policy => policy.AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader());
+});
 
 // Add services to the container.
 
@@ -34,6 +50,30 @@ builder.Services.AddSwaggerGen(options =>
             Url = new Uri("https://example.com/license")
         }
     });
+    options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    {
+        In = ParameterLocation.Header,
+        Description = "Please enter token",
+        Name = "Authorization",
+        Type = SecuritySchemeType.Http,
+        BearerFormat = "JWT",
+        Scheme = "bearer"
+    });
+    options.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference
+                {
+                    Id = "Bearer",
+                    Type = ReferenceType.SecurityScheme
+                }
+            },
+            Array.Empty<string>()
+        }
+    });
+
     
     var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
     options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
@@ -50,6 +90,12 @@ builder.Services.AddScoped<IPendingCollectionsQueryService, PendingCollectionsQu
 builder.Services.AddScoped<ICropRepository, CropRepository>();
 builder.Services.AddScoped<ICropCommandService, CropCommandService>();
 builder.Services.AddScoped<ICropQueryService, CropQueryService>();
+
+builder.Services.AddScoped<IUserRepository,UserRepository>();
+builder.Services.AddScoped<IUserCommandService,UserCommandService>();
+builder.Services.AddScoped<IEncryptService,EncryptService>();
+builder.Services.AddScoped<ITokenService,TokenService>();
+builder.Services.AddScoped<IUserQueryService,UserQueryService>();
 
 //AUtomapper
 builder.Services.AddAutoMapper(
@@ -69,6 +115,10 @@ builder.Services.AddDbContext<AgroSolutionsContext>(
         );
     });
 
+//Auth
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer();
+    
 var app = builder.Build();
 
 app.UseMiddleware<ErrorHandlerMiddleware>();
@@ -89,8 +139,12 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseAuthorization();
+app.UseAuthentication();
 
 app.MapControllers();
+
+app.UseMiddleware<AuthenticationMiddleware>();
+
+app.UseCors("AllowAllPolicy");
 
 app.Run();

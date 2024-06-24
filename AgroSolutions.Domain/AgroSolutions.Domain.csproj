@@ -21,12 +21,6 @@
       <Folder Include="Employee\Services\" />
       <Folder Include="Finance\Models\Aggregates\" />
       <Folder Include="IAM\Models\Aggregates\" />
-      <Folder Include="IAM\Models\Commands\" />
-      <Folder Include="IAM\Models\Entities\" />
-      <Folder Include="IAM\Models\Queries\" />
-      <Folder Include="IAM\Models\Response\" />
-      <Folder Include="IAM\Repositories\" />
-      <Folder Include="IAM\Services\" />
       <Folder Include="PendingCollection\Models\Aggregates\" />
       <Folder Include="PendingTask\Models\Aggregates\" />
       <Folder Include="PendingTask\Models\Commands\" />
@@ -36,6 +30,7 @@
       <Folder Include="PendingTask\Repositories\" />
       <Folder Include="PendingTask\Services\" />
       <Folder Include="Publishing\Models\Commands\" />
+      <Folder Include="Publishing\Models\Entities\" />
       <Folder Include="Publishing\Models\Queries\" />
       <Folder Include="Publishing\Models\Response\" />
       <Folder Include="Publishing\Models\ValueObjects\" />

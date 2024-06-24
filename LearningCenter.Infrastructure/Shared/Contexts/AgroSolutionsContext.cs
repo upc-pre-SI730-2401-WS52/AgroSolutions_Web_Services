@@ -1,4 +1,5 @@
 using Domain;
+using LearningCenter.Domain.Security.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace Infraestructure.Contexts;
@@ -18,27 +19,46 @@ public class AgroSolutionsContext : DbContext
     public DbSet<Adviser> Advisers { get; set; }
     public DbSet<Finance> Finances { get; set; }
     public DbSet<PendingCollections> PendingCollectionsCollections { get; set; }
+    
+    public DbSet<User> Users { get; set; }
+
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         if (!optionsBuilder.IsConfigured)
         {
             var serverVersion = new MySqlServerVersion(new Version(8, 0, 29));
-            optionsBuilder.UseMySql("Server=127.0.0.1,3306;Uid=root;Pwd=12345678;Database=agro_solutions_ws52;",
+            optionsBuilder.UseMySql("Server=127.0.0.1,3306;Uid=root;Pwd=12345678;Database=agro_solutions;",
                 serverVersion);
         }
     }
 
     protected override void OnModelCreating(ModelBuilder builder)
-    {
+        {
         base.OnModelCreating(builder);
 
         builder.Entity<Finance>().ToTable("Finance");
+
         builder.Entity<Finance>().ToTable("PendingCollection");
+
         //builder.Entity<Finance>().HasKey(p => p.Id);
         //builder.Entity<Finance>().Property(p => p.Name).IsRequired().HasMaxLength(25);
         builder.Entity<Crop>().ToTable("Crop");
         builder.Entity<Calendar>().ToTable("Calendar");
         builder.Entity<Adviser>().ToTable("Adviser");
+
+        builder.Entity<User>().ToTable("User");
+        builder.Entity<User>().HasKey(p => p.Id);
+        builder.Entity<User>().Property(p => p.Username).IsRequired().HasMaxLength(50);
+        builder.Entity<User>().Property(p => p.DniOrRuc).IsRequired();
+        builder.Entity<User>().Property(p => p.CompanyName).IsRequired();
+        builder.Entity<User>().Property(p => p.EmailAddress).IsRequired();
+        builder.Entity<User>().Property(p => p.Phone).IsRequired().HasMaxLength(12);
+        builder.Entity<User>().Property(p => p.Role).IsRequired().HasMaxLength(20);
+        builder.Entity<User>().Property(p => p.PasswordHashed).IsRequired();
+        builder.Entity<User>().Property(p => p.ConfirmmPassword).IsRequired();
+        builder.Entity<User>().Property(p => p.CreateDate).IsRequired().HasDefaultValue(DateTime.Now);
+        builder.Entity<User>().Property(p => p.IsActive).IsRequired().HasDefaultValue(true);
+
     }
 }

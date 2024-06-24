@@ -480,3 +480,12 @@ D:\.NET\Backend web\AgroSolutions_Web_Services\AgroSolutions.Presentation\obj\De
 D:\.NET\Backend web\AgroSolutions_Web_Services\AgroSolutions.Presentation\obj\Debug\net7.0\AgroSolutions.Presentation.pdb
 D:\.NET\Backend web\AgroSolutions_Web_Services\AgroSolutions.Presentation\obj\Debug\net7.0\AgroSolutions.Presentation.genruntimeconfig.cache
 D:\.NET\Backend web\AgroSolutions_Web_Services\AgroSolutions.Presentation\obj\Debug\net7.0\ref\AgroSolutions.Presentation.dll
+D:\.NET\Backend web\AgroSolutions_Web_Services\AgroSolutions.Presentation\bin\Debug\net7.0\BCrypt.Net.dll
+D:\.NET\Backend web\AgroSolutions_Web_Services\AgroSolutions.Presentation\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+D:\.NET\Backend web\AgroSolutions_Web_Services\AgroSolutions.Presentation\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\.NET\Backend web\AgroSolutions_Web_Services\AgroSolutions.Presentation\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+D:\.NET\Backend web\AgroSolutions_Web_Services\AgroSolutions.Presentation\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+D:\.NET\Backend web\AgroSolutions_Web_Services\AgroSolutions.Presentation\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\.NET\Backend web\AgroSolutions_Web_Services\AgroSolutions.Presentation\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+D:\.NET\Backend web\AgroSolutions_Web_Services\AgroSolutions.Presentation\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\.NET\Backend web\AgroSolutions_Web_Services\AgroSolutions.Presentation\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll

@@ -1,6 +1,7 @@
 using Infraestructure;
 using AutoMapper;
 using Domain;
+using LearningCenter.Domain.IAM.Models.Comands;
 using Presentation.Request;
 
 namespace _1_API.Mapper;
@@ -14,5 +15,7 @@ public class RequestToModels : Profile
         CreateMap<CreateAdviserCommand, Adviser>();
         CreateMap<CreateCropsCommand, Crop>();
         CreateMap<CreateCalendarCommand, Calendar>();
+        CreateMap<SingupCommand, User>();
+        CreateMap<SigninCommand, User>();
     }
 }

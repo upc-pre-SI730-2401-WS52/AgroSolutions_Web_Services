@@ -46,4 +46,6 @@ public class ErrorHandlerMiddleware
         context.Response.StatusCode = (int)code;
         await context.Response.WriteAsync(result);
     }
+    
+    
 }

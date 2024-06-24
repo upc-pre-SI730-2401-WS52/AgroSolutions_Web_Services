@@ -20,7 +20,6 @@
 
     <ItemGroup>
         <Folder Include="Employee\Persistence\" />
-        <Folder Include="IAM\Pesistence\" />
         <Folder Include="PendingTask\Percistence\" />
         <Folder Include="Publishing\"/>
         <Folder Include="Publishing\Persistence\" />
