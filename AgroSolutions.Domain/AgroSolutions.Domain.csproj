@@ -23,12 +23,6 @@
       <Folder Include="IAM\Models\Aggregates\" />
       <Folder Include="PendingCollection\Models\Aggregates\" />
       <Folder Include="PendingTask\Models\Aggregates\" />
-      <Folder Include="PendingTask\Models\Commands\" />
-      <Folder Include="PendingTask\Models\Entities\" />
-      <Folder Include="PendingTask\Models\Queries\" />
-      <Folder Include="PendingTask\Models\Response\" />
-      <Folder Include="PendingTask\Repositories\" />
-      <Folder Include="PendingTask\Services\" />
       <Folder Include="Publishing\Models\Commands\" />
       <Folder Include="Publishing\Models\Entities\" />
       <Folder Include="Publishing\Models\Queries\" />

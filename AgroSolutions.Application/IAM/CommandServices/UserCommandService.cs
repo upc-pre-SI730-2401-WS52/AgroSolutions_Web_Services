@@ -58,11 +58,23 @@ public class UserCommandService : IUserCommandService
             Phone = command.Phone,
             Role = command.Role,
             PasswordHashed = _encryptService.Encrypt(command.PasswordHashed),
-            ConfirmmPassword = (command.ConfirmmPassword),
+            ConfirmmPassword =  _encryptService.Encrypt(command.ConfirmmPassword),
 
         };
         
         var result = await _userRepository.RegisterAsync(user);
         return result;
     }
+    
+    public  async Task<bool> Handle(DeleteUserCommand command)
+    {
+        var  existingAccount = await _userRepository.GetUserByIdAsync(command.Id);
+            
+        if (existingAccount == null) 
+            throw new NotException("Account not found");
+        
+        return  await _userRepository.DeleteUserAsync(command.Id);
+
+    }
+    
 }

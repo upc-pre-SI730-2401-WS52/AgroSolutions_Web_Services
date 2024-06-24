@@ -10,4 +10,14 @@ public static class Constants
     public const int CALIFICACION_MAX = 5;
     public const int AREA_MIN = 1; 
     public const double COSTO_MIN = 0.1; 
+    public static int MAX_PENDING { get; set; } = 30;
+
+    
+    public static string ToUpperFirstLetter(string str)
+    {
+        if (string.IsNullOrEmpty(str))
+            return str;
+
+        return char.ToUpper(str[0]) + str.Substring(1).ToLower();
+    }
 }

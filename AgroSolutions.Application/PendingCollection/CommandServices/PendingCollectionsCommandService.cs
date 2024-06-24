@@ -35,7 +35,7 @@ public class PendingCollectionsCommandService : IPendingCollectionsCommandServic
     public async Task<bool> Handle(DeletePendingCollections command)
     {
         var existingPendingCollection = _pendingCollectionsRepository.GetById(command.Id);
-        if (existingPendingCollection == null) throw new FinanceNotException("Finance not found");
+        if (existingPendingCollection == null) throw new NotException("Finance not found");
         return await _pendingCollectionsRepository.Delete(command.Id);
     }
 }

@@ -27,8 +27,6 @@
       <Folder Include="Employee\CommandServices\" />
       <Folder Include="Employee\QueryServices\" />
       <Folder Include="Mtk\" />
-      <Folder Include="PendingCollection\CommandServices\" />
-      <Folder Include="PendingCollection\QueryServices\" />
       <Folder Include="Publishing\CommandServices\" />
       <Folder Include="Publishing\QueryServices\" />
       <Folder Include="Purchase\" />

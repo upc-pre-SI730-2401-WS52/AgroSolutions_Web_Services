@@ -12,12 +12,14 @@ public class User : ModelBase
     public string PasswordHashed { get; set; }
     
     public string ConfirmmPassword { get; set; }
-
     
+    public List<Pending> PendingList { get; set; }
+
 }
 
 
 public enum UserRole{
     Farmer,
-    Seller
+    Seller,
+    Admin
 }

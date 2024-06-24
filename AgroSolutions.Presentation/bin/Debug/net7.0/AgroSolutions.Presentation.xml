@@ -154,5 +154,14 @@
              <response code="409">Error validating data</response>
              <response code="500">Unexpected error</response>
         </member>
+        <member name="M:LearningCenter.Presentation.IAM.Controllers.UserController.GetAsync">
+            <summary>Obtain all the active User</summary>
+             <remarks>
+             GET /api/User
+               </remarks>
+             <response code="200">Returns all the User</response>
+             <response code="404">If there are no User</response>
+             <response code="500">If there is an internal server error</response>
+        </member>
     </members>
 </doc>

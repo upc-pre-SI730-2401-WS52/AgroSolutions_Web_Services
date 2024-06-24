@@ -1,4 +1,5 @@
 using Domain;
+using LearningCenter.Domain.IAM.Queries;
 using LearningCenter.Domain.Security.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -21,6 +22,9 @@ public class AgroSolutionsContext : DbContext
     public DbSet<PendingCollections> PendingCollectionsCollections { get; set; }
     
     public DbSet<User> Users { get; set; }
+    
+    public DbSet<Pending> Pendings { get; set; }
+
 
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -59,6 +63,18 @@ public class AgroSolutionsContext : DbContext
         builder.Entity<User>().Property(p => p.ConfirmmPassword).IsRequired();
         builder.Entity<User>().Property(p => p.CreateDate).IsRequired().HasDefaultValue(DateTime.Now);
         builder.Entity<User>().Property(p => p.IsActive).IsRequired().HasDefaultValue(true);
-
+        
+        builder.Entity<Pending>().ToTable("Pending");
+        builder.Entity<Pending>().HasKey(p => p.Id);
+        builder.Entity<Pending>().Property(p => p.Name).IsRequired().HasMaxLength(20);
+        builder.Entity<Pending>().Property(p => p.Description).IsRequired().HasMaxLength(50);
+        builder.Entity<Pending>().Property(p => p.DueDate).IsRequired();
+        builder.Entity<Pending>().Property(p => p.AssignedTo).IsRequired().HasMaxLength(20);
+        builder.Entity<Pending>().Property(p => p.Priority).IsRequired().HasMaxLength(20);
+        builder.Entity<Pending>().Property(p => p.Category).IsRequired().HasMaxLength(20);
+        builder.Entity<Pending>().Property(p => p.State).IsRequired();
+        builder.Entity<Pending>().Property(p => p.IdUser).IsRequired();
+        builder.Entity<Pending>().Property(p => p.CreateDate).IsRequired().HasDefaultValue(DateTime.Now);
+        builder.Entity<Pending>().Property(p => p.IsActive).IsRequired().HasDefaultValue(true);
     }
 }

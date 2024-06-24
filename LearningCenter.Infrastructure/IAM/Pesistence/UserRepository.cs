@@ -2,6 +2,7 @@ using Infraestructure.Contexts;
 using LearningCenter.Domain.IAM;
 using LearningCenter.Domain.IAM.Repositories;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualBasic;
 
 namespace LearningCenter.Infraestructure.IAM.Persistence;
 
@@ -59,4 +60,17 @@ public class UserRepository : IUserRepository
             .Where(x => x.DniOrRuc == dniOrRucruc && x.IsActive)
             .FirstOrDefaultAsync();
     }
+
+    public async Task<bool> DeleteUserAsync(int id)
+    {
+        var exitingAccount = await _agroSolutionsContext.Users.FirstOrDefaultAsync(t => t.Id == id);
+        if (exitingAccount != null)
+        {
+            exitingAccount.IsActive = false;
+            _agroSolutionsContext.Users.Update(exitingAccount);
+            await _agroSolutionsContext.SaveChangesAsync();
+            return true;
+        }
+        return false;
+    }    
 }

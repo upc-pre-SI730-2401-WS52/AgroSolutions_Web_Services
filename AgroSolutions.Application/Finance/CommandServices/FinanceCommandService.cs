@@ -37,7 +37,7 @@ public class FinanceCommandService : IFinanceCommandService
         var existingFinance = await _financeRepository.GetById(command.Id);
         var finance = _mapper.Map<UpdateFinanceCommand, Finance>(command);
 
-        if (existingFinance == null) throw new FinanceNotException("Finance not found");
+        if (existingFinance == null) throw new NotException("Finance not found");
 
         if (existingFinance.Month != finance.Month)
             throw new ConstraintException("Description can not be updated");
@@ -48,7 +48,7 @@ public class FinanceCommandService : IFinanceCommandService
     public async Task<bool> Handle(DeleteFinanceCommand command)
     {
         var existingFinance = _financeRepository.GetById(command.Id);
-        if (existingFinance == null) throw new FinanceNotException("Finance not found");
+        if (existingFinance == null) throw new NotException("Finance not found");
         return await _financeRepository.Delete(command.Id);
     }
 }

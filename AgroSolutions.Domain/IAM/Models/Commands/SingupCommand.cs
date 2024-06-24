@@ -13,8 +13,7 @@ public record SingupCommand
     public string DniOrRuc { get; set; }
     
     [Required(ErrorMessage = "Company name is required.")]
-    [StringLength(50, ErrorMessage = "Company name cannot exceed 50 characters.")]
-    [RegularExpression("[a-zA-Z]+$", ErrorMessage = "Task description must contain only letters.")]
+    [StringLength(50, ErrorMessage = "Company name cannot exceed 50 characters.")] 
     public string CompanyName { get; set; }
 
     [Required]

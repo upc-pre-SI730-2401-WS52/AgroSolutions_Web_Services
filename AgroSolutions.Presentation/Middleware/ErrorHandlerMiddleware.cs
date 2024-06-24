@@ -32,7 +32,7 @@ public class ErrorHandlerMiddleware
         var code = HttpStatusCode.InternalServerError;
         var result = ex.Message;
 
-        if (ex is FinanceNotException)
+        if (ex is NotException)
         {
             code = HttpStatusCode.NotFound;
         }

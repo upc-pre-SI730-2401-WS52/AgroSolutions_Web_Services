@@ -10,4 +10,5 @@ public interface IUserRepository
     Task<List<User>> GetUserRoleSearchAsync(string role);
     Task<User> GetUserByCompanyNameAsync(string companyName);
     Task<User> GetUserByDniOrRucAsync(string dniOrRuc );
+    Task<bool> DeleteUserAsync(int id);
 }
