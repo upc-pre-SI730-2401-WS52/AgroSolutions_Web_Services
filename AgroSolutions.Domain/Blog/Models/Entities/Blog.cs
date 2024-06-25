@@ -24,14 +24,14 @@ public enum RoleBlog{
 public enum TypeAuthor
 {
     Editor,
-    Colaborador,
-    Invitado
+    Collaborator,
+    Guest
 }
 
 public enum CategoryBlog
 {
-    Tecnología,
+    Technology,
     Agriculture,
-    Salud,
-    Finanzas,
+    Health,
+    Finance,
 }
