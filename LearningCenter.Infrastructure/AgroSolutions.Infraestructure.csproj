@@ -19,7 +19,6 @@
     </ItemGroup>
 
     <ItemGroup>
-        <Folder Include="Employee\Persistence\" />
         <Folder Include="Publishing\"/>
         <Folder Include="Publishing\Persistence\" />
         <Folder Include="Shared\"/>

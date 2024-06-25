@@ -24,8 +24,6 @@
       <Folder Include="Blog\CommandService\" />
       <Folder Include="Blog\QueryServices\" />
       <Folder Include="Domain\" />
-      <Folder Include="Employee\CommandServices\" />
-      <Folder Include="Employee\QueryServices\" />
       <Folder Include="Mtk\" />
       <Folder Include="Publishing\CommandServices\" />
       <Folder Include="Publishing\QueryServices\" />

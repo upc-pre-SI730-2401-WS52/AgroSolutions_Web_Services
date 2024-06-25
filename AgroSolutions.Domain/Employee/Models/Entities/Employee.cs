@@ -11,7 +11,6 @@ public class Employee : ModelBase
     public string Phone  { get; set; }
     public string PhotoUrl { get; set; }
     public int TeamId { get; set; }
-    public Team Team { get; set; }
 }
 
 public enum Job{

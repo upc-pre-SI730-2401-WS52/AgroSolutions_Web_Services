@@ -88,9 +88,11 @@ builder.Services.AddSwaggerGen(options =>
 builder.Services.AddScoped<IFinanceRepository, FinanceRepository>();
 builder.Services.AddScoped<IFinanceCommandService, FinanceCommandService>();
 builder.Services.AddScoped<IFinanceQueryService, FinanceQueryService>();
+
 builder.Services.AddScoped<IPendingCollectionsRepository, PendingCollectionsRepository >();
 builder.Services.AddScoped<IPendingCollectionsCommandService, PendingCollectionsCommandService>();
 builder.Services.AddScoped<IPendingCollectionsQueryService, PendingCollectionsQueryService>();
+
 builder.Services.AddScoped<ICropRepository, CropRepository>();
 builder.Services.AddScoped<ICropCommandService, CropCommandService>();
 builder.Services.AddScoped<ICropQueryService, CropQueryService>();
@@ -104,6 +106,11 @@ builder.Services.AddScoped<IUserQueryService,UserQueryService>();
 builder.Services.AddScoped<IPendingRepository, PendingRepository>();
 builder.Services.AddScoped<IPendingCommandService, PendingCommandService>();
 builder.Services.AddScoped<IPendingQueryService, PendingQueryService>();
+
+
+builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+builder.Services.AddScoped<IEmployeeCommandService, EmployeeCommandService>();
+builder.Services.AddScoped<IEmployeeQueryService, EmployeeQueryService>();
 
 //AUtomapper
 builder.Services.AddAutoMapper(

@@ -9,4 +9,6 @@ public interface IEmployeeQueryService
     Task<EmployeeResponse?> Handle(GetByDniEmployeeQuery query);
     Task<EmployeeResponse?> Handle(GetByTeamIdAdviserEmployeeQuery query);
     Task<List<EmployeeResponse>?> Handle(GetByJobEmployeeQuery query);
+    Task<List<EmployeShortResponse>?> Handle(GetByJobSearchQuery query);
+
 }

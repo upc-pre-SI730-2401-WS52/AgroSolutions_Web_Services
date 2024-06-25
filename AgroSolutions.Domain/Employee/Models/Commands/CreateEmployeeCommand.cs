@@ -39,7 +39,4 @@ public class CreateEmployeeCommand
     [Required(ErrorMessage = "PhotoUrl date is required.")]
     [Url(ErrorMessage = "Invalid URL format.")]
     public string PhotoUrl { get; set; }
-    
-    [Required(ErrorMessage = "Due date is required.")]
-    public int TeamId { get; set; }
 }

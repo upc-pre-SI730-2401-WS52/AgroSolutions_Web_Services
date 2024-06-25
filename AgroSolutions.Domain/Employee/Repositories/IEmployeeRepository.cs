@@ -10,9 +10,11 @@ public interface IEmployeeRepository
     
     Task<Employee> GetByTeamIdAdviserEmployeeAsync(int iTeamId);
 
-    Task<List<Employee>> GetByJobEmployeeAsync(string? job, int teamId);
+    Task<List<Employee>> GetByJobAndTeamEmployeeAsync(string? job, int teamId);
     
+    Task<List<Employee>> GetByJobEmployeSearcheAsync(string? job);
+
+
     Task<int>  SaveEmployeeAsync(Employee dataEmployee);
-       
     Task<bool> DeleteEmployeeAsync(int id); 
 }

@@ -89,7 +89,6 @@ public class AgroSolutionsContext : DbContext
         builder.Entity<Employee>().Property(p => p.TeamId).IsRequired();
         builder.Entity<Employee>().Property(p => p.CreateDate).IsRequired().HasDefaultValue(DateTime.Now);
         builder.Entity<Employee>().Property(p => p.IsActive).IsRequired().HasDefaultValue(true);
-        builder.Entity<Employee>().HasOne<Team>().WithMany(t => t.EmployeeId).HasForeignKey(e => e.TeamId);
 
     }
 }

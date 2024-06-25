@@ -240,6 +240,52 @@
              <response code="404">If there are no pending</response>
              <response code="500">If there is an internal server error</response>
         </member>
+        <member name="M:Presentation.Publishing.Controllers.EmployeeController.GetAsync">
+            <summary>Obtain all the active employee</summary>
+             <remarks>
+             GET /api/v1/employee
+               </remarks>
+             <response code="200">Returns all the employee</response>
+             <response code="404">If there are no employee</response>
+             <response code="500">If there is an internal server error</response>
+        </member>
+        <member name="M:Presentation.Publishing.Controllers.EmployeeController.GetAsync(System.Int32)">
+            <summary>Obtain all the active employee</summary>
+             <remarks>
+             GET /api/v1/employee/5
+               </remarks>
+             <response code="200">Returns all the employee</response>
+             <response code="404">If there are no employee</response>
+             <response code="500">If there is an internal server error</response>
+        </member>
+        <member name="M:Presentation.Publishing.Controllers.EmployeeController.GetSearchAsyncJobAndTeam(System.String,System.Int32)">
+            <summary>Obtain all the active employee</summary>
+             <remarks>
+             GET api/Employee/SearchAsyncJobAndTeam
+               </remarks>
+             <response code="200">Returns all the employee</response>
+             <response code="404">If there are no employee</response>
+             <response code="500">If there is an internal server error</response>
+        </member>
+        <member name="M:Presentation.Publishing.Controllers.EmployeeController.GetSearchJobAsync(System.String)">
+            <summary>Obtain all the active employee</summary>
+             <remarks>
+             GET api/Employee/SearchJob
+               </remarks>
+             <response code="200">Returns all the employee</response>
+             <response code="404">If there are no employee</response>
+             <response code="500">If there is an internal server error</response>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Presentation.Publishing.Controllers.EmployeeController.PostAsync(Presentation.Request.CreateEmployeeCommand)" -->
+        <member name="M:Presentation.Publishing.Controllers.EmployeeController.DeleteAsync(System.Int32)">
+            <summary>Obtain delete id from employee</summary>
+             <remarks>
+             DELETE /api/v1/employee/5
+               </remarks>
+             <response code="200">Returns the delete employee</response>
+             <response code="404">If there are no employee</response>
+             <response code="500">If there is an internal server error</response>
+        </member>
         <member name="M:LearningCenter.Presentation.IAM.Controllers.UserController.GetAsync">
             <summary>Obtain all the active User</summary>
              <remarks>
