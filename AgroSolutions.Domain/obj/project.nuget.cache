@@ -1,12 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TkNoHA8jy7A+queYbAkK9deZ055A62pAkgFzhYY9TRHE35xdUBxmeUhX3nt3n5KrPUKG11IE58HUqBoeDkODNA==",
+  "dgSpecHash": "jcUssduw54M8KonM0xWOYdFF8t4cBJ7bD1kOSKuNO2G3KzH4VL59lUd0eKLasO50GFd6OwulinMBeTK5BKe2Mg==",
   "success": true,
-  "projectFilePath": "F:\\APLICACIONES WEB\\CLONE\\AgroSolutions_Web_Services\\AgroSolutions.Domain\\AgroSolutions.Domain.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\Gina\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.19\\microsoft.netcore.app.ref.7.0.19.nupkg.sha512",
-    "C:\\Users\\Gina\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.19\\microsoft.windowsdesktop.app.ref.7.0.19.nupkg.sha512",
-    "C:\\Users\\Gina\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.19\\microsoft.aspnetcore.app.ref.7.0.19.nupkg.sha512"
-  ],
+  "projectFilePath": "D:\\.NET\\Backend web\\AgroSolutions_Web_Services\\AgroSolutions.Domain\\AgroSolutions.Domain.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

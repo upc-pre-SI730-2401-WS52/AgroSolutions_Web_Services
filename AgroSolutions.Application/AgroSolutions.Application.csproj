@@ -26,12 +26,6 @@
       <Folder Include="Publishing\CommandServices\" />
       <Folder Include="Publishing\QueryServices\" />
       <Folder Include="Purchase\" />
-      <Folder Include="Shopping\Application\" />
-      <Folder Include="Shopping\Iam\Application\" />
-      <Folder Include="Shopping\Iam\Infrastructure\" />
-      <Folder Include="Shopping\Iam\Services\" />
-      <Folder Include="Shopping\Infrastructure\" />
-      <Folder Include="Shopping\Interfaces\" />
     </ItemGroup>
 
 </Project>

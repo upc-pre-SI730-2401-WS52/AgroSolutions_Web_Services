@@ -12571,38 +12571,45 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Gina\\.nuget\\packages\\": {}
+    "C:\\Users\\USER\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\APLICACIONES WEB\\CLONE\\AgroSolutions_Web_Services\\AgroSolutions.Presentation.Test\\AgroSolutions.Presentation.Test.csproj",
+      "projectUniqueName": "D:\\.NET\\Backend web\\AgroSolutions_Web_Services\\AgroSolutions.Presentation.Test\\AgroSolutions.Presentation.Test.csproj",
       "projectName": "AgroSolutions.Presentation.Test",
-      "projectPath": "F:\\APLICACIONES WEB\\CLONE\\AgroSolutions_Web_Services\\AgroSolutions.Presentation.Test\\AgroSolutions.Presentation.Test.csproj",
-      "packagesPath": "C:\\Users\\Gina\\.nuget\\packages\\",
-      "outputPath": "F:\\APLICACIONES WEB\\CLONE\\AgroSolutions_Web_Services\\AgroSolutions.Presentation.Test\\obj\\",
+      "projectPath": "D:\\.NET\\Backend web\\AgroSolutions_Web_Services\\AgroSolutions.Presentation.Test\\AgroSolutions.Presentation.Test.csproj",
+      "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
+      "outputPath": "D:\\.NET\\Backend web\\AgroSolutions_Web_Services\\AgroSolutions.Presentation.Test\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Gina\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "F:\\APLICACIONES WEB\\CLONE\\AgroSolutions_Web_Services\\AgroSolutions.Application\\AgroSolutions.Application.csproj": {
-              "projectPath": "F:\\APLICACIONES WEB\\CLONE\\AgroSolutions_Web_Services\\AgroSolutions.Application\\AgroSolutions.Application.csproj"
+            "D:\\.NET\\Backend web\\AgroSolutions_Web_Services\\AgroSolutions.Application\\AgroSolutions.Application.csproj": {
+              "projectPath": "D:\\.NET\\Backend web\\AgroSolutions_Web_Services\\AgroSolutions.Application\\AgroSolutions.Application.csproj"
             },
-            "F:\\APLICACIONES WEB\\CLONE\\AgroSolutions_Web_Services\\AgroSolutions.Presentation\\AgroSolutions.Presentation.csproj": {
-              "projectPath": "F:\\APLICACIONES WEB\\CLONE\\AgroSolutions_Web_Services\\AgroSolutions.Presentation\\AgroSolutions.Presentation.csproj"
+            "D:\\.NET\\Backend web\\AgroSolutions_Web_Services\\AgroSolutions.Presentation\\AgroSolutions.Presentation.csproj": {
+              "projectPath": "D:\\.NET\\Backend web\\AgroSolutions_Web_Services\\AgroSolutions.Presentation\\AgroSolutions.Presentation.csproj"
             },
-            "F:\\APLICACIONES WEB\\CLONE\\AgroSolutions_Web_Services\\LearningCenter.Infrastructure\\AgroSolutions.Infraestructure.csproj": {
-              "projectPath": "F:\\APLICACIONES WEB\\CLONE\\AgroSolutions_Web_Services\\LearningCenter.Infrastructure\\AgroSolutions.Infraestructure.csproj"
+            "D:\\.NET\\Backend web\\AgroSolutions_Web_Services\\LearningCenter.Infrastructure\\AgroSolutions.Infraestructure.csproj": {
+              "projectPath": "D:\\.NET\\Backend web\\AgroSolutions_Web_Services\\LearningCenter.Infrastructure\\AgroSolutions.Infraestructure.csproj"
             }
           }
         }
@@ -12653,26 +12660,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[7.0.19, 7.0.19]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[7.0.19, 7.0.19]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[7.0.19, 7.0.19]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\Gina\\.dotnet\\sdk\\8.0.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
       }
     }
   },
