@@ -28,7 +28,6 @@
         <Folder Include="Finance\" />
         <Folder Include="Profiles\"/>
         <Folder Include="Publishing\"/>
-        <Folder Include="Team\Controllers\" />
     </ItemGroup>
 
 </Project>

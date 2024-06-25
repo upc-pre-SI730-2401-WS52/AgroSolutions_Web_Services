@@ -19,5 +19,8 @@ public class ModelsToRequest : Profile
         CreateMap<User, SigninCommand>();
         CreateMap<Pending, CreatePendingCommand>();
         CreateMap<Employee, CreateEmployeeCommand>();
+        CreateMap<Team, CreateTeamCommand>();
+        CreateMap<Advicer, CreateAdvicerCommand>();
+        CreateMap<Producer, CreateProducerCommand>();
     }
 }

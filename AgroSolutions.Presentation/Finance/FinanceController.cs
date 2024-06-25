@@ -5,6 +5,7 @@ using Infraestructure;
 using AutoMapper;
 using Domain;
 using LearningCenter.Domain.Publishing.Models.Queries;
+using LearningCenter.Presentation.Filters;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.CodeAnalysis.Elfie.Serialization;
@@ -42,6 +43,8 @@ public class FinanceController : ControllerBase
     [ProducesResponseType( typeof(void),StatusCodes.Status404NotFound)]
     [ProducesResponseType(typeof(void),StatusCodes.Status500InternalServerError)]
     [Produces(MediaTypeNames.Application.Json)]
+    [CustomAuthorize("Seller", "Farmer")]
+
     public async Task<IActionResult> GetAsync()
     {
         var result = await _financeQueryService.Handle(new GetAllFinancesQuery());
@@ -54,6 +57,8 @@ public class FinanceController : ControllerBase
     // GET: api/Finance/Search
     [HttpGet]
     [Route("Search")]
+    [CustomAuthorize("Seller", "Farmer")]
+
     public async Task<IActionResult> GetSearchAsync(string? name)
     {
         //var data = await _financeRepository.GetSearchAsync(name, year);
@@ -66,6 +71,7 @@ public class FinanceController : ControllerBase
 
     // GET: api/Finance/5
     [HttpGet("{id}", Name = "GetAsync")]
+    [CustomAuthorize("Seller", "Farmer")]
     public async Task<IActionResult> GetAsync(int id)
     {
         var result = await _financeQueryService.Handle(new GetFinancesByIdQuery(id));
@@ -105,6 +111,7 @@ public class FinanceController : ControllerBase
     [ProducesResponseType(typeof(void), StatusCodes.Status409Conflict)]
     [ProducesResponseType(typeof(void),StatusCodes.Status500InternalServerError)]
     [Produces(MediaTypeNames.Application.Json)]
+    [CustomAuthorize("Seller", "Farmer")]
     public async Task<IActionResult> PostAsync([FromBody] CreateFinanceCommand command)
     {
         if (!ModelState.IsValid) return BadRequest();
@@ -120,6 +127,8 @@ public class FinanceController : ControllerBase
 
     // PUT: api/Finance/5
     [HttpPut("{id}")]
+    [CustomAuthorize("Seller", "Farmer")]
+
     public async Task<IActionResult> PutAsync(int id, [FromBody] UpdateFinanceCommand command)
     {
         command.Id = id;
@@ -132,6 +141,8 @@ public class FinanceController : ControllerBase
 
     // DELETE: api/Finance/5
     [HttpDelete("{id}")]
+    [CustomAuthorize("Seller", "Farmer")]
+
     public async Task<IActionResult> DeleteAsync(int id)
     {
         DeleteFinanceCommand command = new DeleteFinanceCommand { Id = id };

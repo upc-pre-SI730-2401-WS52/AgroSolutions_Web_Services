@@ -28,8 +28,6 @@
       <Folder Include="Publishing\CommandServices\" />
       <Folder Include="Publishing\QueryServices\" />
       <Folder Include="Purchase\" />
-      <Folder Include="Team\CommandServices\" />
-      <Folder Include="Team\QueryServices\" />
     </ItemGroup>
 
 </Project>

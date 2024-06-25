@@ -26,6 +26,11 @@ public class AgroSolutionsContext : DbContext
 
     public DbSet<Employee> Employees { get; set; }
 
+    public DbSet<Team> Teams { get; set; }
+    public DbSet<Advicer> Advicers { get; set; }
+
+    public DbSet<Producer> Producers { get; set; }
+
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
@@ -89,6 +94,28 @@ public class AgroSolutionsContext : DbContext
         builder.Entity<Employee>().Property(p => p.TeamId).IsRequired();
         builder.Entity<Employee>().Property(p => p.CreateDate).IsRequired().HasDefaultValue(DateTime.Now);
         builder.Entity<Employee>().Property(p => p.IsActive).IsRequired().HasDefaultValue(true);
-
+        
+        builder.Entity<Team>().ToTable("Team");
+        builder.Entity<Team>().HasKey(p => p.Id);
+        builder.Entity<Team>().Property(p => p.TeamCode).IsRequired().HasMaxLength(10);
+        builder.Entity<Team>().Property(p => p.Budget).IsRequired();
+        builder.Entity<Team>().Property(p => p.CropCode).IsRequired().HasMaxLength(10);
+        builder.Entity<Team>().Property(p => p.CreateDate).IsRequired().HasDefaultValue(DateTime.Now);
+        builder.Entity<Team>().Property(p => p.IsActive).IsRequired().HasDefaultValue(true);
+        
+        builder.Entity<Advicer>().ToTable("Advicer");
+        builder.Entity<Advicer>().HasKey(p => p.Id);
+        builder.Entity<Advicer>().Property(p => p.Name).IsRequired().HasMaxLength(10);
+        builder.Entity<Advicer>().Property(p => p.Dni).IsRequired();
+        builder.Entity<Advicer>().Property(p => p.CreateDate).IsRequired().HasDefaultValue(DateTime.Now);
+        builder.Entity<Advicer>().Property(p => p.IsActive).IsRequired().HasDefaultValue(true);
+        
+        builder.Entity<Producer>().ToTable("Producer");
+        builder.Entity<Producer>().HasKey(p => p.Id);
+        builder.Entity<Producer>().Property(p => p.Name).IsRequired().HasMaxLength(10);
+        builder.Entity<Producer>().Property(p => p.Dni).IsRequired();
+        builder.Entity<Producer>().Property(p => p.CreateDate).IsRequired().HasDefaultValue(DateTime.Now);
+        builder.Entity<Producer>().Property(p => p.IsActive).IsRequired().HasDefaultValue(true);
+        
     }
 }

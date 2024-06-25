@@ -112,6 +112,10 @@ builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
 builder.Services.AddScoped<IEmployeeCommandService, EmployeeCommandService>();
 builder.Services.AddScoped<IEmployeeQueryService, EmployeeQueryService>();
 
+builder.Services.AddScoped<ITeamRepository, TeamRepository>();
+builder.Services.AddScoped<ITeamCommandService, TeamCommandService>();
+builder.Services.AddScoped<ITeamQueryService, TeamQueryService>();
+
 //AUtomapper
 builder.Services.AddAutoMapper(
     typeof(RequestToModels),

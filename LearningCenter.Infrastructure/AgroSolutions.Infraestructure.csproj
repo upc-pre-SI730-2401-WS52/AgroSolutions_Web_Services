@@ -22,7 +22,6 @@
         <Folder Include="Publishing\"/>
         <Folder Include="Publishing\Persistence\" />
         <Folder Include="Shared\"/>
-        <Folder Include="Team\Persistence\" />
     </ItemGroup>
 
     <ItemGroup>

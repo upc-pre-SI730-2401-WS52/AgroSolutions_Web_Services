@@ -11,8 +11,12 @@ public interface ITeamRepository
     
     Task<Team> GetByCropCodeAsync(string cropCode);
 
-    Task<Team> GetByAdviserCodeAsync(string adviser);
+    Task<Advicer> GetByNameAdvicerAsync(string name);
+    Task<Producer> GetByNameProducerAsync(string name);
     
+    Task<Advicer> GetByDniAdvicerAsync(string dni);
+    Task<Producer> GetByDniProducerAsync(string dni);
+
     Task<int>  SaveTeamAsync(Team dataTeam);
     
     Task<bool> DeleteTeamAsync(int id);

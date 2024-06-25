@@ -18,5 +18,8 @@ public class ModelsToResponse : Profile
         CreateMap<Pending, PendingResponse>();
         CreateMap<Employee, EmployeeResponse>();
         CreateMap<Employee, EmployeShortResponse>();
+        CreateMap<Team, TeamResponse>();
+        CreateMap<Advicer, AdvicerResponse>();
+        CreateMap<Producer, ProducerResponse>();
     }
 }

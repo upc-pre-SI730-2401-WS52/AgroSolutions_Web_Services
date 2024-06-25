@@ -286,6 +286,36 @@
              <response code="404">If there are no employee</response>
              <response code="500">If there is an internal server error</response>
         </member>
+        <member name="M:Presentation.TeamController.GetAsync">
+            <summary>Obtain all the active weccount</summary>
+             <remarks>
+             GET /api/Account
+               </remarks>
+             <response code="200">Returns all the account</response>
+             <response code="404">If there are no account</response>
+             <response code="500">If there is an internal server error</response>
+        </member>
+        <member name="M:Presentation.TeamController.GetAsync(System.Int32)">
+             GET: api/v1/Team/5
+            <summary>Obtain the active teams</summary>
+             <remarks>
+             GET: api/v1/Team/5
+               </remarks>
+             <response code="200">Returns all the team</response>
+             <response code="404">If there are no team</response>
+             <response code="500">If there is an internal server error</response>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Presentation.TeamController.PostAsync(Presentation.Request.CreateTeamCommand)" -->
+        <member name="M:Presentation.TeamController.DeleteAsync(System.Int32)">
+             DELETE: api/v1/Team/5
+            <summary>Obtain the active teams</summary>
+             <remarks>
+             DELETE api/v1/Team/5
+               </remarks>
+             <response code="200">Returns delete the team</response>
+             <response code="404">If there are no team</response>
+             <response code="500">If there is an internal server error</response>
+        </member>
         <member name="M:LearningCenter.Presentation.IAM.Controllers.UserController.GetAsync">
             <summary>Obtain all the active User</summary>
              <remarks>
