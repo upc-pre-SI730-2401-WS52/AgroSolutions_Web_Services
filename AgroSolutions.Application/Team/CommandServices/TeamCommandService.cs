@@ -44,7 +44,7 @@ public class TeamCommandService : ITeamCommandService
         var  existingTeam = await _teamRepository.GetByIdTeamAsync(command.Id);
             
         if (existingTeam == null) 
-            throw new NotException("Account not found");
+            throw new NotException("Team not found");
             
         if (existingTeam != null && existingTeam.Producers.Count > 0)
         {

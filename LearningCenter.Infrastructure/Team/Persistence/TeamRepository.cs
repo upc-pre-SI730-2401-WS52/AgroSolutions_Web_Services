@@ -16,14 +16,14 @@ public class TeamRepository : ITeamRepository
 
     public async Task<List<Team>> GetAllTeamAsync()
     {
-        var result = await _agroSolutionsContext.Teams.Where(t => t.IsActive).Include(t => t.Advicer)
+        var result = await _agroSolutionsContext.Teams.Where(t => t.IsActive).Include(t => t.Advicers)
             .Include(t => t.Producers).ToListAsync();    
         return result;
     }
 
     public async Task<Team> GetByIdTeamAsync(int id)
     {
-        return await   _agroSolutionsContext.Teams.Where(t => t.Id == id && t.IsActive).Include(t => t.Advicer)
+        return await   _agroSolutionsContext.Teams.Where(t => t.Id == id && t.IsActive).Include(t => t.Advicers)
             .Include(t => t.Producers).FirstOrDefaultAsync();
        
     }

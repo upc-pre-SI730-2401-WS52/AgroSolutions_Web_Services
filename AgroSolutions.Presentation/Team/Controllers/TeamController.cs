@@ -45,7 +45,6 @@ namespace Presentation
         [ProducesResponseType(typeof(void), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(void), StatusCodes.Status500InternalServerError)]
         [Produces(MediaTypeNames.Application.Json)]
-        [HttpGet]
         [CustomAuthorize("Seller", "Farmer")]
         public async Task<IActionResult> GetAsync()
         {
