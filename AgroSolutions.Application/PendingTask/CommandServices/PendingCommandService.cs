@@ -51,6 +51,10 @@ public class PendingCommandService : IPendingCommandService
         {
             throw new InvalidOperationException("Cannot set the due date to a past date");
         }
+        
+        if (existingPending.Name != pending.Name)
+            throw new ConstraintException("Name can not be updated");
+
             
         if (existingPending.Priority != pending.Priority)
             throw new ConstraintException("Priority can not be updated");

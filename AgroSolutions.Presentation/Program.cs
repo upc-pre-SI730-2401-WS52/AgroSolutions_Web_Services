@@ -6,6 +6,7 @@ using Application.IAM.CommandServices;
 using Domain;
 using Infraestructure;
 using Infraestructure.Contexts;
+using Infrastructure;
 using LearningCenter.Domain.IAM.Repositories;
 using LearningCenter.Domain.IAM.Services;
 using LearningCenter.Infraestructure.IAM.Persistence;
@@ -26,7 +27,10 @@ builder.Services.AddCors(options =>
             .AllowAnyHeader());
 });
 
+
 // Add services to the container.
+
+builder.Services.AddHttpContextAccessor();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -97,6 +101,10 @@ builder.Services.AddScoped<IEncryptService,EncryptService>();
 builder.Services.AddScoped<ITokenService,TokenService>();
 builder.Services.AddScoped<IUserQueryService,UserQueryService>();
 
+builder.Services.AddScoped<IPendingRepository, PendingRepository>();
+builder.Services.AddScoped<IPendingCommandService, PendingCommandService>();
+builder.Services.AddScoped<IPendingQueryService, PendingQueryService>();
+
 //AUtomapper
 builder.Services.AddAutoMapper(
     typeof(RequestToModels),
@@ -140,6 +148,8 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthentication();
+
+app.UseAuthorization();
 
 app.MapControllers();
 

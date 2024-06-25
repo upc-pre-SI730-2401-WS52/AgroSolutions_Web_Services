@@ -17,7 +17,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace LearningCenter.Presentation.IAM.Controllers
 {
-    [Route("v1/[controller]")]
+    [Route("api/v1/[controller]")]
     [ApiController]
     public class UserController : ControllerBase
     {
@@ -32,7 +32,7 @@ namespace LearningCenter.Presentation.IAM.Controllers
             _mapper = mapper;
         }
 
-        // GET: api/User
+        // GET: api/v1/User
         ///<summary>Obtain all the active User</summary>
         /// <remarks>
         /// GET /api/User
@@ -57,7 +57,7 @@ namespace LearningCenter.Presentation.IAM.Controllers
             return Ok(result);
         }
         
-        // POST: api/User
+        // POST: api/v1/User
         /// <summary>
         /// Singup a new User.
         /// </summary>
@@ -98,7 +98,7 @@ namespace LearningCenter.Presentation.IAM.Controllers
         }
         
         
-        // POST: api/User
+        // POST: api/v1/User/5
         /// <summary>
         /// Login a new User.
         /// </summary>
@@ -132,7 +132,7 @@ namespace LearningCenter.Presentation.IAM.Controllers
         }
         
         
-        // DELETE: api/User/5
+        // DELETE: api/v1/User/5
         ///<summary>Obtain all the active User</summary>
         /// <remarks>
         /// DELETE: api/User/5

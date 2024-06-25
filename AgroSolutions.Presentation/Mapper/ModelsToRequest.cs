@@ -17,5 +17,7 @@ public class ModelsToRequest : Profile
         CreateMap<Calendar, CreateCalendarCommand>();
         CreateMap<User, SingupCommand>();
         CreateMap<User, SigninCommand>();
+        CreateMap<Pending, CreatePendingCommand>();
+
     }
 }

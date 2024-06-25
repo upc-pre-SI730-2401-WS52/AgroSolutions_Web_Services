@@ -1,7 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System.Security.Claims;
+using Microsoft.EntityFrameworkCore;
 using Shared;
 using Domain;
 using Infraestructure.Contexts;
+using Microsoft.AspNetCore.Http;
 using Shared;
 
 namespace Infrastructure;
@@ -9,20 +11,21 @@ namespace Infrastructure;
 public class PendingRepository : IPendingRepository
 {
     private readonly AgroSolutionsContext _agroSolutionsContext;
+    private readonly IHttpContextAccessor _httpContextAccessor;
 
-    public PendingRepository(AgroSolutionsContext agroSolutionsContext)
+    public PendingRepository(AgroSolutionsContext agroSolutionsContext, IHttpContextAccessor httpContextAccessor)
     {
         _agroSolutionsContext = agroSolutionsContext;
-    }
+        _httpContextAccessor = httpContextAccessor;
 
+    }
     
     public async Task<List<Pending>> GetAllPendingAsync()
     {
         var result = await _agroSolutionsContext.Pendings.Where(t => t.IsActive).ToListAsync();
         return result;
     }
-
-  
+    
     public async Task<List<Pending>> GetPendingSearchAsync(string? priority, string? category, string? stateOfTask)
     {
         priority = Constants.ToUpperFirstLetter(priority);
@@ -60,6 +63,8 @@ public class PendingRepository : IPendingRepository
         {
             try
             {
+               //var userId = GetUserIdFromHttpContext();
+               //var userId = GetUserIdFromHttpContext();
                 dataPending.IsActive = true;
                 _agroSolutionsContext.Pendings.Add(dataPending); 
                 await _agroSolutionsContext.SaveChangesAsync();
@@ -89,8 +94,7 @@ public class PendingRepository : IPendingRepository
             existingPendings.AssignedTo = dataPending.AssignedTo;
             existingPendings.State = dataPending.State;
             existingPendings.UpdatedDate = DateTime.UtcNow;
-            existingPendings.UpdatedUser = existingPendings.IdUser;
-            
+
             _agroSolutionsContext.Pendings.Update(existingPendings);
 
             await _agroSolutionsContext.SaveChangesAsync();

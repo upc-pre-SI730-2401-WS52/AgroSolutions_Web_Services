@@ -34,5 +34,5 @@ public record SingupCommand
     public string PasswordHashed { get; set; }
     
     [Compare("PasswordHashed", ErrorMessage = "The password and confirmation password do not match.")]
-    public string ConfirmmPassword { get; set; }
+    public string ConfirmPassword { get; set; }
 }

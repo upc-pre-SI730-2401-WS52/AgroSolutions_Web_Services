@@ -1,10 +1,11 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Domain;
 
 namespace Presentation.Request;
 
 public class UpdatePendingCommand
 {
-    [Required] public int Id { get; set; }
+    public int Id { get; set; }
 
     [Required(ErrorMessage = "Task name is required.")]
     [StringLength(20, ErrorMessage = "Assigned to cannot be longer than 20 characters.")]
@@ -23,18 +24,15 @@ public class UpdatePendingCommand
     [StringLength(20, ErrorMessage = "Assigned to cannot be longer than 20 characters.")]
     [RegularExpression("^[a-zA-Z]+$", ErrorMessage = "AssignedTo description must contain only letters.")]
     public string AssignedTo { get; set; }
-
-    [Required(ErrorMessage = "Priority is required.")]
-    [StringLength(20, ErrorMessage = "Priority cannot be longer than 20 characters.")]
-    [RegularExpression("^[a-zA-Z]+$", ErrorMessage = "Priority must contain only letters.")]
-    public string Priority { get; set; }
-
+    
     [Required(ErrorMessage = "Category is required.")]
     [StringLength(20, ErrorMessage = "Category cannot be longer than 20 characters.")]
     [RegularExpression("^[a-zA-Z]+$", ErrorMessage = "Task description must contain only letters.")]
+    [EnumDataType(typeof(Category), ErrorMessage = "Invalid user Category.")]
     public string Category { get; set; }
 
     [Required(ErrorMessage = "Task state is required.")]
-    [RegularExpression("^[a-zA-Z]+$", ErrorMessage = "Task description must contain only letters.")]
+    [RegularExpression("^[a-zA-Z]+$", ErrorMessage = "Task description must contain only letters.")] 
+    [EnumDataType(typeof(State), ErrorMessage = "Invalid user State.")]
     public string State { get; set; }
 }

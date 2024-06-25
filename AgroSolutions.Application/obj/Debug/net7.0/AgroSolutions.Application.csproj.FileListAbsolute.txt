@@ -36,3 +36,9 @@ D:\.NET\Backend web\AgroSolutions_Web_Services\AgroSolutions.Application\obj\Deb
 D:\.NET\Backend web\AgroSolutions_Web_Services\AgroSolutions.Application\obj\Debug\net7.0\refint\AgroSolutions.Application.dll
 D:\.NET\Backend web\AgroSolutions_Web_Services\AgroSolutions.Application\obj\Debug\net7.0\AgroSolutions.Application.pdb
 D:\.NET\Backend web\AgroSolutions_Web_Services\AgroSolutions.Application\obj\Debug\net7.0\ref\AgroSolutions.Application.dll
+D:\.NET\Backend web\AgroSolutions_Web_Services\AgroSolutions.Application\bin\Debug\net7.0\Microsoft.AspNetCore.Http.Abstractions.dll
+D:\.NET\Backend web\AgroSolutions_Web_Services\AgroSolutions.Application\bin\Debug\net7.0\System.IO.Pipelines.dll
+D:\.NET\Backend web\AgroSolutions_Web_Services\AgroSolutions.Application\bin\Debug\net7.0\Microsoft.Extensions.Features.dll
+D:\.NET\Backend web\AgroSolutions_Web_Services\AgroSolutions.Application\bin\Debug\net7.0\Microsoft.AspNetCore.Http.Features.dll
+D:\.NET\Backend web\AgroSolutions_Web_Services\AgroSolutions.Application\bin\Debug\net7.0\Microsoft.Net.Http.Headers.dll
+D:\.NET\Backend web\AgroSolutions_Web_Services\AgroSolutions.Application\bin\Debug\net7.0\Microsoft.AspNetCore.Connections.Abstractions.dll

@@ -32,3 +32,9 @@ D:\.NET\Backend web\AgroSolutions_Web_Services\LearningCenter.Infrastructure\obj
 D:\.NET\Backend web\AgroSolutions_Web_Services\LearningCenter.Infrastructure\obj\Debug\net7.0\refint\AgroSolutions.Infraestructure.dll
 D:\.NET\Backend web\AgroSolutions_Web_Services\LearningCenter.Infrastructure\obj\Debug\net7.0\AgroSolutions.Infraestructure.pdb
 D:\.NET\Backend web\AgroSolutions_Web_Services\LearningCenter.Infrastructure\obj\Debug\net7.0\ref\AgroSolutions.Infraestructure.dll
+D:\.NET\Backend web\AgroSolutions_Web_Services\LearningCenter.Infrastructure\bin\Debug\net7.0\Microsoft.AspNetCore.Http.Abstractions.dll
+D:\.NET\Backend web\AgroSolutions_Web_Services\LearningCenter.Infrastructure\bin\Debug\net7.0\System.IO.Pipelines.dll
+D:\.NET\Backend web\AgroSolutions_Web_Services\LearningCenter.Infrastructure\bin\Debug\net7.0\Microsoft.Extensions.Features.dll
+D:\.NET\Backend web\AgroSolutions_Web_Services\LearningCenter.Infrastructure\bin\Debug\net7.0\Microsoft.AspNetCore.Http.Features.dll
+D:\.NET\Backend web\AgroSolutions_Web_Services\LearningCenter.Infrastructure\bin\Debug\net7.0\Microsoft.Net.Http.Headers.dll
+D:\.NET\Backend web\AgroSolutions_Web_Services\LearningCenter.Infrastructure\bin\Debug\net7.0\Microsoft.AspNetCore.Connections.Abstractions.dll

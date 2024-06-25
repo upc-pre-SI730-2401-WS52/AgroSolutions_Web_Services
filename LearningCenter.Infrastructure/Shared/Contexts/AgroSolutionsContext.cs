@@ -1,6 +1,5 @@
 using Domain;
 using LearningCenter.Domain.IAM.Queries;
-using LearningCenter.Domain.Security.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace Infraestructure.Contexts;
@@ -38,12 +37,12 @@ public class AgroSolutionsContext : DbContext
     }
 
     protected override void OnModelCreating(ModelBuilder builder)
-        {
+    {
         base.OnModelCreating(builder);
 
         builder.Entity<Finance>().ToTable("Finance");
 
-        builder.Entity<Finance>().ToTable("PendingCollection");
+        builder.Entity<PendingCollections>().ToTable("PendingCollection");
 
         //builder.Entity<Finance>().HasKey(p => p.Id);
         //builder.Entity<Finance>().Property(p => p.Name).IsRequired().HasMaxLength(25);
@@ -60,10 +59,10 @@ public class AgroSolutionsContext : DbContext
         builder.Entity<User>().Property(p => p.Phone).IsRequired().HasMaxLength(12);
         builder.Entity<User>().Property(p => p.Role).IsRequired().HasMaxLength(20);
         builder.Entity<User>().Property(p => p.PasswordHashed).IsRequired();
-        builder.Entity<User>().Property(p => p.ConfirmmPassword).IsRequired();
+        builder.Entity<User>().Property(p => p.ConfirmPassword).IsRequired();
         builder.Entity<User>().Property(p => p.CreateDate).IsRequired().HasDefaultValue(DateTime.Now);
         builder.Entity<User>().Property(p => p.IsActive).IsRequired().HasDefaultValue(true);
-        
+
         builder.Entity<Pending>().ToTable("Pending");
         builder.Entity<Pending>().HasKey(p => p.Id);
         builder.Entity<Pending>().Property(p => p.Name).IsRequired().HasMaxLength(20);
@@ -73,8 +72,8 @@ public class AgroSolutionsContext : DbContext
         builder.Entity<Pending>().Property(p => p.Priority).IsRequired().HasMaxLength(20);
         builder.Entity<Pending>().Property(p => p.Category).IsRequired().HasMaxLength(20);
         builder.Entity<Pending>().Property(p => p.State).IsRequired();
-        builder.Entity<Pending>().Property(p => p.IdUser).IsRequired();
         builder.Entity<Pending>().Property(p => p.CreateDate).IsRequired().HasDefaultValue(DateTime.Now);
         builder.Entity<Pending>().Property(p => p.IsActive).IsRequired().HasDefaultValue(true);
+
     }
 }

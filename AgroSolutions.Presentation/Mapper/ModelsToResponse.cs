@@ -15,5 +15,7 @@ public class ModelsToResponse : Profile
         CreateMap<Adviser, AdviserResponse>();
         CreateMap<Calendar, CalendarResponse>();
         CreateMap<User, UserResponse>();
+        CreateMap<Pending, PendingResponse>();
+
     }
 }

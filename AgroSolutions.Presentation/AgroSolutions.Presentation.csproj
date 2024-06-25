@@ -27,7 +27,6 @@
     <ItemGroup>
         <Folder Include="Employee\Controllers\" />
         <Folder Include="Finance\" />
-        <Folder Include="PendingTask\Controllers\" />
         <Folder Include="Profiles\"/>
         <Folder Include="Publishing\"/>
         <Folder Include="Team\Controllers\" />

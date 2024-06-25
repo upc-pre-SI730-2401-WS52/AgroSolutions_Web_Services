@@ -58,7 +58,7 @@ public class UserCommandService : IUserCommandService
             Phone = command.Phone,
             Role = command.Role,
             PasswordHashed = _encryptService.Encrypt(command.PasswordHashed),
-            ConfirmmPassword =  _encryptService.Encrypt(command.ConfirmmPassword),
+            ConfirmPassword =  _encryptService.Encrypt(command.ConfirmPassword),
 
         };
         

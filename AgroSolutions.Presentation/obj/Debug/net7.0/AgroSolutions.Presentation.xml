@@ -154,12 +154,156 @@
              <response code="409">Error validating data</response>
              <response code="500">Unexpected error</response>
         </member>
+        <member name="M:Presentation.Controllers.PendingController.GetAsync">
+            <summary>Obtain all the active pending</summary>
+             <remarks>
+             GET /api/Pending
+               </remarks>
+             <response code="200">Returns all the pending</response>
+             <response code="404">If there are no pending</response>
+             <response code="500">If there is an internal server error</response>
+        </member>
+        <member name="M:Presentation.Controllers.PendingController.GetSearchAsync(System.String,System.String,System.String)">
+            <summary>Obtain all the active pending</summary>
+             <remarks>
+             GET /api/Pending
+               </remarks>
+             <response code="200">Returns the pending</response>
+             <response code="404">If there are no pending</response>
+             <response code="500">If there is an internal server error</response>
+        </member>
+        <member name="M:Presentation.Controllers.PendingController.GetPendingByIdAsync(System.Int32)">
+            <summary>Obtain all the active pending</summary>
+             <remarks>
+             GET api/v1/Pending/5
+               </remarks>
+             <response code="200">Returns the pending</response>
+             <response code="404">If there are no pending</response>
+             <response code="500">If there is an internal server error</response>
+        </member>
+        <member name="M:Presentation.Controllers.PendingController.PostAsync(Presentation.Request.CreatePendingCommand)">
+             <summary>
+             Creates a new Pending.
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 POST /api/Account
+                 {
+                 "name": "Project",
+                 "descriptionTask": "Description",
+                 "dueDate": "2025-06-07",
+                 "assignedTo": "Maria",
+                 "priority": " High-Medium-Low",
+                 "category": "Crop-Production-Operation-Distribution-Market-Specialization",
+                 "state": "Done-ToDo-Doing",
+                 }
+            
+             </remarks>
+             <param name="CreatePendingCommand">The Pending to create</param>
+             <returns>A newly created Pending</returns>
+             <response code="201">Returns the newly created Pending</response>
+             <response code="400">If the Pending has invalid property</response>
+             <response code="409">Error validating data</response>
+             <response code="500">Unexpected error</response>
+        </member>
+        <member name="M:Presentation.Controllers.PendingController.PutAsync(System.Int32,Presentation.Request.UpdatePendingCommand)">
+             <summary>
+             Update a Pending.
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 POST /api/Account
+                 {
+                 "descriptionTask": "Description",
+                 "dueDate": "2025-06-07",
+                 "assignedTo": "Maria",
+                 "category": "Crop-Production-Operation-Distribution-Market-Specialization",
+                 "state": "Done-ToDo-Doing",
+                 }
+            
+             </remarks>
+             <param name="CreatePendingCommand">The Pending to create</param>
+             <returns>A newly update Pending</returns>
+             <response code="201">Returns the newly update Pending</response>
+             <response code="400">If the Pending has invalid property</response>
+             <response code="409">Error validating data</response>
+             <response code="500">Unexpected error</response>
+        </member>
+        <member name="M:Presentation.Controllers.PendingController.DeleteAsync(System.Int32)">
+            <summary>Obtain all the active pending</summary>
+             <remarks>
+             DELETE: api/v1/Pending/5
+               </remarks>
+             <response code="200">Returns all the pending</response>
+             <response code="404">If there are no pending</response>
+             <response code="500">If there is an internal server error</response>
+        </member>
         <member name="M:LearningCenter.Presentation.IAM.Controllers.UserController.GetAsync">
             <summary>Obtain all the active User</summary>
              <remarks>
              GET /api/User
                </remarks>
              <response code="200">Returns all the User</response>
+             <response code="404">If there are no User</response>
+             <response code="500">If there is an internal server error</response>
+        </member>
+        <member name="M:LearningCenter.Presentation.IAM.Controllers.UserController.RegisterAsync(LearningCenter.Domain.IAM.Models.Comands.SingupCommand)">
+             <summary>
+             Singup a new User.
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 POST /api/Account
+                 {
+                 "username": "Jorge Ruiz",
+                 "dni": "28089824",
+                 "ruc": "35355800618",
+                 "companyName": "empresa",
+                 "emailAddress": "user@example.com",
+                 "phone": "809324921", 
+                 "role": "Seller - Farmer - Admin",
+                 "password": "Securepassword123!",
+                 "confirmPassword": "Securepassword123!"
+                 }
+            
+             </remarks>
+             <param name="SinginCommad">The User to create</param>
+             <returns>A newly created User</returns>
+             <response code="201">Returns the newly created User</response>
+             <response code="400">If the User has invalid property</response>
+             <response code="409">Error validating data</response>
+             <response code="500">Unexpected error</response>
+        </member>
+        <member name="M:LearningCenter.Presentation.IAM.Controllers.UserController.LoginAsync(LearningCenter.Domain.IAM.Models.Comands.SigninCommand)">
+             <summary>
+             Login a new User.
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 POST /api/Account
+                 {
+                 "username": "Jorge Ruiz",
+                 "password": "Securepassword123!",
+                 }
+            
+             </remarks>
+             <param name="SinginCommad">The User to create</param>
+             <returns>A newly created User</returns>
+             <response code="201">Returns the newly created User</response>
+             <response code="400">If the User has invalid property</response>
+             <response code="409">Error validating data</response>
+             <response code="500">Unexpected error</response>
+        </member>
+        <member name="M:LearningCenter.Presentation.IAM.Controllers.UserController.DeleteAsync(System.Int32)">
+            <summary>Obtain all the active User</summary>
+             <remarks>
+             DELETE: api/User/5
+               </remarks>
+             <response code="200">Returns delete the User</response>
              <response code="404">If there are no User</response>
              <response code="500">If there is an internal server error</response>
         </member>

@@ -10,11 +10,8 @@ public class User : ModelBase
     public string Phone { get; set; }
     public string Role { get; set; }
     public string PasswordHashed { get; set; }
-    
-    public string ConfirmmPassword { get; set; }
-    
-    public List<Pending> PendingList { get; set; }
-
+    public string ConfirmPassword { get; set; }
+    public List<Pending> Pendings { get; set; }
 }
 
 
