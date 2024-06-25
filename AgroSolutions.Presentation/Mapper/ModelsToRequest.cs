@@ -1,6 +1,8 @@
 using Infraestructure;
 using AutoMapper;
 using Domain;
+using LearningCenter.Domain.Blog.Models.Commands;
+using LearningCenter.Domain.Blog.Models.Entities;
 using LearningCenter.Domain.IAM.Models.Comands;
 using Presentation.Request;
 
@@ -22,5 +24,7 @@ public class ModelsToRequest : Profile
         CreateMap<Team, CreateTeamCommand>();
         CreateMap<Advicer, CreateAdvicerCommand>();
         CreateMap<Producer, CreateProducerCommand>();
+        CreateMap<Blog, CreateBlogCommand>();
+
     }
 }

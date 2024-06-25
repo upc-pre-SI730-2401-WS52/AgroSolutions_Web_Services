@@ -32,13 +32,13 @@ namespace Presentation
             _mapper = mapper;
         }
 
-        // GET: api/Employee
-        ///<summary>Obtain all the active weccount</summary>
+        // GET: api/Team
+        ///<summary>Obtain all the active Team</summary>
         /// <remarks>
-        /// GET /api/Account
+        /// GET /api/Team
         ///   </remarks>
-        /// <response code="200">Returns all the account</response>
-        /// <response code="404">If there are no account</response>
+        /// <response code="200">Returns all the Team</response>
+        /// <response code="404">If there are no Team</response>
         /// <response code="500">If there is an internal server error</response>
         [HttpGet]
         [ProducesResponseType(typeof(List<TeamResponse>), 200)]
@@ -83,13 +83,23 @@ namespace Presentation
         ///</remarks>
         /// Sample request:
         ///
-        ///     POST /api/Account
         ///     {
-        ///     "teamCode": "9SutZOOnm",
-        ///     "dni": "28089824",
-        ///     "budget": 1000000000,
-        ///     "cropCode": "G5nOvJ5IxE"
-        ///
+        ///         "teamCode": "n8Eo",
+        ///    "budget": 1000000000,
+        ///    "cropCode": "5u7aneungY",
+        ///    "advicers": [
+        ///    {
+        ///        "name": "Mario",
+        ///        "dni": "81255660"
+        ///    }
+        ///    ],
+        ///    "producers": [
+        ///    {
+        ///        "name": "Maria",
+        ///        "dni": "00843799"
+        ///    }
+        ///    ]
+        /// }
         /// </remarks>
         /// <param name="CreateTeamCommand">The Team to create</param>
         /// <returns>A newly created Team</returns>

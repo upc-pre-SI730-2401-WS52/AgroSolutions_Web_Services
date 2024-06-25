@@ -7,6 +7,7 @@ using Domain;
 using Infraestructure;
 using Infraestructure.Contexts;
 using Infrastructure;
+using LearningCenter.Domain.Blog.Services;
 using LearningCenter.Domain.IAM.Repositories;
 using LearningCenter.Domain.IAM.Services;
 using LearningCenter.Infraestructure.IAM.Persistence;
@@ -115,6 +116,10 @@ builder.Services.AddScoped<IEmployeeQueryService, EmployeeQueryService>();
 builder.Services.AddScoped<ITeamRepository, TeamRepository>();
 builder.Services.AddScoped<ITeamCommandService, TeamCommandService>();
 builder.Services.AddScoped<ITeamQueryService, TeamQueryService>();
+
+builder.Services.AddScoped<IBlogRepository, BlogRepository>();
+builder.Services.AddScoped<IBlogCommandService, BlogCommandService>();
+builder.Services.AddScoped<IBlogQueryService, BlogQueryService>();
 
 //AUtomapper
 builder.Services.AddAutoMapper(

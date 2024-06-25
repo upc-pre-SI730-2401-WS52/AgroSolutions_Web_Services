@@ -1,4 +1,5 @@
 using Domain;
+using LearningCenter.Domain.Blog.Models.Entities;
 using LearningCenter.Domain.IAM.Queries;
 using Microsoft.EntityFrameworkCore;
 
@@ -30,6 +31,7 @@ public class AgroSolutionsContext : DbContext
     public DbSet<Advicer> Advicers { get; set; }
 
     public DbSet<Producer> Producers { get; set; }
+    public DbSet<Blog> Blogs { get; set; }
 
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -80,7 +82,7 @@ public class AgroSolutionsContext : DbContext
         builder.Entity<Pending>().Property(p => p.State).IsRequired();
         builder.Entity<Pending>().Property(p => p.CreateDate).IsRequired().HasDefaultValue(DateTime.Now);
         builder.Entity<Pending>().Property(p => p.IsActive).IsRequired().HasDefaultValue(true);
-        
+
         builder.Entity<Employee>().ToTable("Employee");
         builder.Entity<Employee>().HasKey(p => p.Id);
         builder.Entity<Employee>().Property(p => p.Name).IsRequired().HasMaxLength(50);
@@ -94,7 +96,7 @@ public class AgroSolutionsContext : DbContext
         builder.Entity<Employee>().Property(p => p.TeamId).IsRequired();
         builder.Entity<Employee>().Property(p => p.CreateDate).IsRequired().HasDefaultValue(DateTime.Now);
         builder.Entity<Employee>().Property(p => p.IsActive).IsRequired().HasDefaultValue(true);
-        
+
         builder.Entity<Team>().ToTable("Team");
         builder.Entity<Team>().HasKey(p => p.Id);
         builder.Entity<Team>().Property(p => p.TeamCode).IsRequired().HasMaxLength(10);
@@ -102,20 +104,35 @@ public class AgroSolutionsContext : DbContext
         builder.Entity<Team>().Property(p => p.CropCode).IsRequired().HasMaxLength(10);
         builder.Entity<Team>().Property(p => p.CreateDate).IsRequired().HasDefaultValue(DateTime.Now);
         builder.Entity<Team>().Property(p => p.IsActive).IsRequired().HasDefaultValue(true);
-        
+
         builder.Entity<Advicer>().ToTable("Advicer");
         builder.Entity<Advicer>().HasKey(p => p.Id);
         builder.Entity<Advicer>().Property(p => p.Name).IsRequired().HasMaxLength(10);
         builder.Entity<Advicer>().Property(p => p.Dni).IsRequired();
         builder.Entity<Advicer>().Property(p => p.CreateDate).IsRequired().HasDefaultValue(DateTime.Now);
         builder.Entity<Advicer>().Property(p => p.IsActive).IsRequired().HasDefaultValue(true);
-        
+
         builder.Entity<Producer>().ToTable("Producer");
         builder.Entity<Producer>().HasKey(p => p.Id);
         builder.Entity<Producer>().Property(p => p.Name).IsRequired().HasMaxLength(10);
         builder.Entity<Producer>().Property(p => p.Dni).IsRequired();
         builder.Entity<Producer>().Property(p => p.CreateDate).IsRequired().HasDefaultValue(DateTime.Now);
         builder.Entity<Producer>().Property(p => p.IsActive).IsRequired().HasDefaultValue(true);
-        
+
+
+        builder.Entity<Blog>().ToTable("Blog");
+        builder.Entity<Blog>().HasKey(p => p.Id);
+        builder.Entity<Blog>().Property(p => p.Title).IsRequired().HasMaxLength(50);
+        builder.Entity<Blog>().Property(p => p.Subtitle).IsRequired().HasMaxLength(100);
+        builder.Entity<Blog>().Property(p => p.Content).IsRequired();
+        builder.Entity<Blog>().Property(p => p.Summary).IsRequired();
+        builder.Entity<Blog>().Property(p => p.CategoryBlog).IsRequired();
+        builder.Entity<Blog>().Property(p => p.RoleBlog).IsRequired();
+        builder.Entity<Blog>().Property(p => p.TypeAuthor).IsRequired();
+        builder.Entity<Blog>().Property(p => p.ImageUrl).IsRequired();
+        builder.Entity<Blog>().Property(p => p.CommentsCount).IsRequired();
+        builder.Entity<Blog>().Property(p => p.ReadTimeMinutes).IsRequired();
+        builder.Entity<Blog>().Property(p => p.CreateDate).IsRequired().HasDefaultValue(DateTime.Now);
+        builder.Entity<Blog>().Property(p => p.IsActive).IsRequired().HasDefaultValue(true);
     }
 }

@@ -2,6 +2,8 @@ using _1_API.Response;
 using Infraestructure;
 using AutoMapper;
 using Domain;
+using LearningCenter.Domain.Blog.Models.Entities;
+using LearningCenter.Domain.Blog.Models.Response;
 
 namespace _1_API.Mapper;
 
@@ -21,5 +23,10 @@ public class ModelsToResponse : Profile
         CreateMap<Team, TeamResponse>();
         CreateMap<Advicer, AdvicerResponse>();
         CreateMap<Producer, ProducerResponse>();
+        CreateMap<Blog, BlogResponse>();
+        CreateMap<Blog, BlogShortResponse>();
+
+            
+            
     }
 }

@@ -12,7 +12,8 @@ public static class Constants
     public const double COSTO_MIN = 0.1; 
     public static int MAX_PENDING { get; set; } = 30;
 
-    
+    public static int TIME_READ { get; set; } = 5;
+
     public static string ToUpperFirstLetter(string str)
     {
         if (string.IsNullOrEmpty(str))

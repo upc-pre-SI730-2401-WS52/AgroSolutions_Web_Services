@@ -35,7 +35,6 @@ public class PendingQueryService : IPendingQueryService
         var data =  await _pendingRepository.GetByIdPendingAsync(query.Id);
         var result = _mapper.Map<Pending, PendingResponse>(data);
         return result;
-        
     }
 
     public async Task<PendingResponse?> Handle(GetByNamePendingQuery query)

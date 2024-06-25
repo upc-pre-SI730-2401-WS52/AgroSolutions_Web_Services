@@ -21,8 +21,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Blog\CommandService\" />
-      <Folder Include="Blog\QueryServices\" />
       <Folder Include="Domain\" />
       <Folder Include="Mtk\" />
       <Folder Include="Publishing\CommandServices\" />
