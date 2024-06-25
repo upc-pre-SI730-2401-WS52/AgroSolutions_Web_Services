@@ -24,6 +24,7 @@ public class AgroSolutionsContext : DbContext
     
     public DbSet<Pending> Pendings { get; set; }
 
+    public DbSet<Employee> Employees { get; set; }
 
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -74,6 +75,21 @@ public class AgroSolutionsContext : DbContext
         builder.Entity<Pending>().Property(p => p.State).IsRequired();
         builder.Entity<Pending>().Property(p => p.CreateDate).IsRequired().HasDefaultValue(DateTime.Now);
         builder.Entity<Pending>().Property(p => p.IsActive).IsRequired().HasDefaultValue(true);
+        
+        builder.Entity<Employee>().ToTable("Employee");
+        builder.Entity<Employee>().HasKey(p => p.Id);
+        builder.Entity<Employee>().Property(p => p.Name).IsRequired().HasMaxLength(50);
+        builder.Entity<Employee>().Property(p => p.LastName).IsRequired().HasMaxLength(50);
+        builder.Entity<Employee>().Property(p => p.Age).IsRequired();
+        builder.Entity<Employee>().Property(p => p.Dni).IsRequired().HasMaxLength(8);
+        builder.Entity<Employee>().Property(p => p.Job).IsRequired().HasMaxLength(10);
+        builder.Entity<Employee>().Property(p => p.Salary).IsRequired();
+        builder.Entity<Employee>().Property(p => p.Phone).IsRequired().HasMaxLength(10);
+        builder.Entity<Employee>().Property(p => p.PhotoUrl).IsRequired();
+        builder.Entity<Employee>().Property(p => p.TeamId).IsRequired();
+        builder.Entity<Employee>().Property(p => p.CreateDate).IsRequired().HasDefaultValue(DateTime.Now);
+        builder.Entity<Employee>().Property(p => p.IsActive).IsRequired().HasDefaultValue(true);
+        builder.Entity<Employee>().HasOne<Team>().WithMany(t => t.EmployeeId).HasForeignKey(e => e.TeamId);
 
     }
 }

@@ -18,6 +18,6 @@ public class ModelsToRequest : Profile
         CreateMap<User, SingupCommand>();
         CreateMap<User, SigninCommand>();
         CreateMap<Pending, CreatePendingCommand>();
-
+        CreateMap<Employee, CreateEmployeeCommand>();
     }
 }
