@@ -37,9 +37,9 @@ public class FinanceRepository : IFinanceRepository
             .SingleOrDefaultAsync(t => t.Id == id && t.IsActive);
     }
 
-    public async Task<Finance> GetByNameAsync(string name)
+    public async Task<Finance> GetByMonthAsync(string month)
     {
-        return await _agroSolutionsContext.Finances.Where(t => t.Month == name && t.IsActive).FirstOrDefaultAsync();
+        return await _agroSolutionsContext.Finances.Where(t => t.Month == month && t.IsActive).FirstOrDefaultAsync();
     }
 
     public async Task<int> SaveAsync(Finance data)
@@ -49,7 +49,7 @@ public class FinanceRepository : IFinanceRepository
             try
             {
                 data.IsActive = true;
-                _agroSolutionsContext.Finances.Add(data); //no se refleja en BBDD
+                _agroSolutionsContext.Finances.Add(data); 
                 await _agroSolutionsContext.SaveChangesAsync();
                 await transaction.CommitAsync();
             }
@@ -66,12 +66,26 @@ public class FinanceRepository : IFinanceRepository
 
     public async Task<bool> Update(Finance data, int id)
     {
+        if (float.Parse(data.Incomes) < 0)
+        {
+            throw new ArgumentException("Incomes cannot be negative");
+        }
+
+        if (double.Parse(data.Bills) < 0)
+        {
+            throw new ArgumentException("Bills cannot be negative");
+        }
+
         var exitingFinance = _agroSolutionsContext.Finances.Where(t => t.Id == id).FirstOrDefault();
+        if (exitingFinance == null)
+        {
+            return false;
+        }
+
         exitingFinance.Month = data.Month;
         exitingFinance.Incomes = data.Incomes;
         exitingFinance.Bills = data.Bills;
         exitingFinance.Earning = data.Earning;
-        
 
         _agroSolutionsContext.Finances.Update(exitingFinance);
 
@@ -79,11 +93,11 @@ public class FinanceRepository : IFinanceRepository
         return true;
     }
 
+
     public async Task<bool>  Delete(int id)
     {
         var exitingFinance = _agroSolutionsContext.Finances.Where(t => t.Id == id).FirstOrDefault();
 
-        // _agroSolutionsContext.Finances.Remove(exitingFinance);
         exitingFinance.IsActive = false;
 
         _agroSolutionsContext.Finances.Update(exitingFinance);

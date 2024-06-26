@@ -17,7 +17,6 @@ public class PendingRepository : IPendingRepository
     {
         _agroSolutionsContext = agroSolutionsContext;
         _httpContextAccessor = httpContextAccessor;
-
     }
     
     public async Task<List<Pending>> GetAllPendingAsync()

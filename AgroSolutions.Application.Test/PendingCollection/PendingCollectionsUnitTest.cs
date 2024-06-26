@@ -29,7 +29,7 @@ public class PendingCollectionsUnitTest
             Description = command.Description
         });
 
-        mock.Setup(data => data.GetByNameAsync(command.Type)).ReturnsAsync((PendingCollections)null);
+        mock.Setup(data => data.GetByTypeAsync(command.Type)).ReturnsAsync((PendingCollections)null);
         mock.Setup(data => data.GetAllAsync()).ReturnsAsync(new List<PendingCollections>());
         mock.Setup(data => data.SaveAsync(It.IsAny<PendingCollections>())).ReturnsAsync(1);
 

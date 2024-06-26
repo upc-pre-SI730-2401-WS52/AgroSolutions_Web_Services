@@ -32,7 +32,7 @@ public class FinanceApplicationUnitTest
             Earning = command.Earning,
         });
 
-        mock.Setup(data => data.GetByNameAsync(command.Month)).ReturnsAsync((Finance)null);
+        mock.Setup(data => data.GetByMonthAsync(command.Month)).ReturnsAsync((Finance)null);
         mock.Setup(data => data.GetAllAsync()).ReturnsAsync(new List<Finance>());
         mock.Setup(data => data.SaveAsync(It.IsAny<Finance>())).ReturnsAsync(1);
 

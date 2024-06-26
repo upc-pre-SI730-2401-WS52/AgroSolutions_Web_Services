@@ -9,7 +9,7 @@ public interface IFinanceRepository
 
     Task<Finance> GetById(int id);
 
-    Task<Finance> GetByNameAsync(string name);
+    Task<Finance> GetByMonthAsync(string name);
 
     Task<int> SaveAsync(Finance data);
 

@@ -22,7 +22,7 @@ public class FinanceCommandService : IFinanceCommandService
     {
         var finance = _mapper.Map<CreateFinanceCommand, Finance>(command);
 
-        var existingFinance = await _financeRepository.GetByNameAsync(finance.Month);
+        var existingFinance = await _financeRepository.GetByMonthAsync(finance.Month);
         if (existingFinance != null) throw new DuplicateNameException("Finance already exists");
 
         var total = (await _financeRepository.GetAllAsync()).Count;

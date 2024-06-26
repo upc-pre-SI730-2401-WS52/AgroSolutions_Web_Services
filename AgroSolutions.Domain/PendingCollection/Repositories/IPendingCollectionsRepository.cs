@@ -8,7 +8,7 @@ public interface IPendingCollectionsRepository
 
     Task<PendingCollections> GetById(int id);
 
-    Task<PendingCollections> GetByNameAsync(string name);
+    Task<PendingCollections> GetByTypeAsync(string name);
 
     Task<int> SaveAsync(PendingCollections data);
 

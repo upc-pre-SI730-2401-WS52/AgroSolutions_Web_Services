@@ -43,7 +43,7 @@ public class FinanceController : ControllerBase
     [ProducesResponseType( typeof(void),StatusCodes.Status404NotFound)]
     [ProducesResponseType(typeof(void),StatusCodes.Status500InternalServerError)]
     [Produces(MediaTypeNames.Application.Json)]
-    [CustomAuthorize("Seller", "Farmer")]
+    [CustomAuthorize("Farmer")]
 
     public async Task<IActionResult> GetAsync()
     {
@@ -57,7 +57,7 @@ public class FinanceController : ControllerBase
     // GET: api/Finance/Search
     [HttpGet]
     [Route("Search")]
-    [CustomAuthorize("Seller", "Farmer")]
+    [CustomAuthorize("Farmer")]
 
     public async Task<IActionResult> GetSearchAsync(string? name)
     {
@@ -71,7 +71,7 @@ public class FinanceController : ControllerBase
 
     // GET: api/Finance/5
     [HttpGet("{id}", Name = "GetAsync")]
-    [CustomAuthorize("Seller", "Farmer")]
+    [CustomAuthorize("Farmer")]
     public async Task<IActionResult> GetAsync(int id)
     {
         var result = await _financeQueryService.Handle(new GetFinancesByIdQuery(id));
@@ -111,7 +111,7 @@ public class FinanceController : ControllerBase
     [ProducesResponseType(typeof(void), StatusCodes.Status409Conflict)]
     [ProducesResponseType(typeof(void),StatusCodes.Status500InternalServerError)]
     [Produces(MediaTypeNames.Application.Json)]
-    [CustomAuthorize("Seller", "Farmer")]
+    [CustomAuthorize("Farmer")]
     public async Task<IActionResult> PostAsync([FromBody] CreateFinanceCommand command)
     {
         if (!ModelState.IsValid) return BadRequest();
@@ -127,7 +127,7 @@ public class FinanceController : ControllerBase
 
     // PUT: api/Finance/5
     [HttpPut("{id}")]
-    [CustomAuthorize("Seller", "Farmer")]
+    [CustomAuthorize("Farmer")]
 
     public async Task<IActionResult> PutAsync(int id, [FromBody] UpdateFinanceCommand command)
     {
@@ -141,7 +141,7 @@ public class FinanceController : ControllerBase
 
     // DELETE: api/Finance/5
     [HttpDelete("{id}")]
-    [CustomAuthorize("Seller", "Farmer")]
+    [CustomAuthorize("Farmer")]
 
     public async Task<IActionResult> DeleteAsync(int id)
     {

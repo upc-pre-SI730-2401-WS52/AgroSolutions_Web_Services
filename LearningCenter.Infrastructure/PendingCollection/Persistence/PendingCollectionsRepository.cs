@@ -27,7 +27,7 @@ public class PendingCollectionsRepository : IPendingCollectionsRepository
     {
         var result = await _agroSolutionsContext.PendingCollectionsCollections
             .Where(t => t.IsActive && t.Type.Contains(name)).ToListAsync();; //1000 Reigtros
-
+        
         return result;
     }
 
@@ -37,7 +37,7 @@ public class PendingCollectionsRepository : IPendingCollectionsRepository
             .SingleOrDefaultAsync(t => t.Id == id && t.IsActive);
     }
 
-    public async Task<PendingCollections> GetByNameAsync(string name)
+    public async Task<PendingCollections> GetByTypeAsync(string name)
     {
         return await _agroSolutionsContext.PendingCollectionsCollections.Where(t => t.Type == name && t.IsActive).FirstOrDefaultAsync();
     }

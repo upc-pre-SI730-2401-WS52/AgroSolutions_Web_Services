@@ -69,7 +69,7 @@ namespace Presentation.Controllers
         [ProducesResponseType(typeof(void),StatusCodes.Status500InternalServerError)]
         [Produces(MediaTypeNames.Application.Json)]
         [Route("Search")]
-        [CustomAuthorize("Seller, Farmer")]
+        [CustomAuthorize("Farmer")]
         public async Task<IActionResult> GetSearchAsync(string? priority, string? category, string? stateOfTask)
         {
             var result = await _pendingQueryService.Handle(new GetPendingSearchQuery(priority, category, stateOfTask ));
@@ -91,7 +91,7 @@ namespace Presentation.Controllers
         [ProducesResponseType(typeof(void),StatusCodes.Status500InternalServerError)]
         [Produces(MediaTypeNames.Application.Json)]
         [HttpGet("{id}", Name = "GetPendingById")]
-        [CustomAuthorize("Seller, Farmer")]
+        [CustomAuthorize("Farmer")]
         public  async Task<IActionResult> GetPendingByIdAsync(int id)
         {
             var result = await _pendingQueryService.Handle(new GetByIdPendingQuery(id));
@@ -131,7 +131,7 @@ namespace Presentation.Controllers
         [ProducesResponseType(typeof(void), StatusCodes.Status409Conflict)]
         [ProducesResponseType(typeof(void),StatusCodes.Status500InternalServerError)]
         [Produces(MediaTypeNames.Application.Json)]
-        [CustomAuthorize("Seller", "Admin", "Farmer")]
+        [CustomAuthorize("Admin", "Farmer")]
         public async Task<IActionResult> PostAsync([FromBody] CreatePendingCommand command)
         {
             if (!ModelState.IsValid) return BadRequest();
@@ -173,7 +173,7 @@ namespace Presentation.Controllers
         [ProducesResponseType(typeof(void), StatusCodes.Status409Conflict)]
         [ProducesResponseType(typeof(void),StatusCodes.Status500InternalServerError)]
         [Produces(MediaTypeNames.Application.Json)]
-        [CustomAuthorize("Seller, Farmer")]
+        [CustomAuthorize("Farmer")]
         public async Task<IActionResult> PutAsync(int id, [FromBody] UpdatePendingCommand command)
         {
             if (ModelState.IsValid)
@@ -199,7 +199,7 @@ namespace Presentation.Controllers
         [ProducesResponseType(typeof(void),StatusCodes.Status500InternalServerError)]
         [Produces(MediaTypeNames.Application.Json)]
         [HttpDelete("{id}")]
-        [CustomAuthorize("Seller, Farmer")]
+        [CustomAuthorize("Farmer")]
         public async Task<IActionResult> DeleteAsync(int id)
         {
             DeletePendingCommand command = new DeletePendingCommand { Id = id };

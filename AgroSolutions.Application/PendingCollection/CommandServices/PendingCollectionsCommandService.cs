@@ -22,7 +22,7 @@ public class PendingCollectionsCommandService : IPendingCollectionsCommandServic
     {
         var pendingCollections = _mapper.Map<CreatePendingCollections, PendingCollections>(command);
 
-        var existingPendingCollections = await _pendingCollectionsRepository.GetByNameAsync(pendingCollections.Type);
+        var existingPendingCollections = await _pendingCollectionsRepository.GetByTypeAsync(pendingCollections.Type);
         if (existingPendingCollections != null) throw new DuplicateNameException("Pending collection already exists");
 
         var total = (await _pendingCollectionsRepository.GetAllAsync()).Count;
