@@ -3,6 +3,7 @@ using _1_API.Response;
 using Agrosolutions.Domain.Crops.Model.Queries;
 using AutoMapper;
 using Domain;
+using LearningCenter.Presentation.Filters;
 using Microsoft.AspNetCore.Mvc;
 using Presentation.Request;
 
@@ -38,6 +39,7 @@ public class CropController : ControllerBase
     [ProducesResponseType(typeof(void), StatusCodes.Status409Conflict)]
     [ProducesResponseType(StatusCodes.Status500InternalServerError)]
     [Produces(MediaTypeNames.Application.Json)]
+    [CustomAuthorize("Farmer")]
     public async Task<IActionResult> PostCalendarAsync([FromBody] CreateCalendarCommand command)
     {
         if (!ModelState.IsValid) return BadRequest(ModelState);
@@ -65,6 +67,7 @@ public class CropController : ControllerBase
     [ProducesResponseType(typeof(void), StatusCodes.Status409Conflict)]
     [ProducesResponseType(StatusCodes.Status500InternalServerError)]
     [Produces(MediaTypeNames.Application.Json)]
+    [CustomAuthorize("Farmer")]
     public async Task<IActionResult> PostCropsAsync([FromBody] CreateCropsCommand command)
     {
         if (!ModelState.IsValid) return BadRequest(ModelState);
@@ -92,6 +95,7 @@ public class CropController : ControllerBase
     [ProducesResponseType(typeof(void), StatusCodes.Status409Conflict)]
     [ProducesResponseType(StatusCodes.Status500InternalServerError)]
     [Produces(MediaTypeNames.Application.Json)]
+    [CustomAuthorize("Farmer")]
     public async Task<IActionResult> PostAdviserAsync([FromBody] CreateAdviserCommand command)
     {
         if (!ModelState.IsValid) return BadRequest(ModelState);
@@ -114,6 +118,7 @@ public class CropController : ControllerBase
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     [Produces(MediaTypeNames.Application.Json)]
+    [CustomAuthorize("Farmer")]
     public async Task<IActionResult> GetAllAdvisersAsync()
     {
         var result = await _cropQueryService.Handle(new GetAllAsesoresQuery());
@@ -133,6 +138,7 @@ public class CropController : ControllerBase
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     [Produces(MediaTypeNames.Application.Json)]
+    [CustomAuthorize("Farmer")]
     public async Task<IActionResult> GetAdviserAsync(int id)
     {
         var result = await _cropQueryService.Handle(new GetAsesorByIdQuery(id));
@@ -151,6 +157,7 @@ public class CropController : ControllerBase
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     [Produces(MediaTypeNames.Application.Json)]
+    [CustomAuthorize("Farmer")]
     public async Task<IActionResult> GetCalendarByIdAsync(int id)
     {
         var result = await _cropQueryService.Handle(new GetCalendarioByIdQuery(id));
@@ -169,6 +176,7 @@ public class CropController : ControllerBase
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     [Produces(MediaTypeNames.Application.Json)]
+    [CustomAuthorize("Farmer")]
     public async Task<IActionResult> GetCropsAsync(int id)
     {
         var result = await _cropQueryService.Handle(new GetCultivoByIdQuery(id));
@@ -188,6 +196,7 @@ public class CropController : ControllerBase
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     [Produces(MediaTypeNames.Application.Json)]
+    [CustomAuthorize("Farmer")]
     public async Task<IActionResult> GetCalendarsForCultivoAsync(int cultivoId)
     {
         var result = await _cropQueryService.Handle(new GetAllCalendariosForCultivoQuery(cultivoId));
@@ -207,6 +216,7 @@ public class CropController : ControllerBase
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     [ProducesResponseType(StatusCodes.Status500InternalServerError)]
     [Produces(MediaTypeNames.Application.Json)]
+    [CustomAuthorize("Farmer")]
     public async Task<IActionResult> GetAllCropsAsync()
     {
         var result = await _cropQueryService.Handle(new GetAllCultivosQuery());
