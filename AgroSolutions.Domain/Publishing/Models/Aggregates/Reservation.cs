@@ -1,12 +1,12 @@
 
 using Domain;
-using LearningCenter.Domain.Security.Models;
+//using LearningCenter.Domain.Security.Models;
 
 namespace LearningCenter.Domain.Publishing.Models.Aggregates;
 
 public class Reservation : ModelBase
 {
-    public User User { get; set; }
+    //public User User { get; set; }
     public Finance Finance { get; set; }
     public DateTime ReservationDate { get; set; }
     public DateTime StartTime { get; set; }
